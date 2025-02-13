@@ -2,8 +2,8 @@
 ## Weather News Page Plan.
 ### Research
 * reviewed a number other news websites to get a feel for what content to include, and for ideas on layout. Sites include:
-* https://www.bbc.co.uk/
-* https://news.sky.com/
+* * https://www.bbc.co.uk/
+* * https://news.sky.com/
 
 * Not fully decied on how to implement a weather map yet, but i have found a few different libraries and other useful functions that may be helpful:
 * * https://www.youtube.com/watch?v=Ma_tIbGV4m4
