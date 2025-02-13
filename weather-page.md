@@ -18,6 +18,7 @@
 
 ### Designs (Wireframes, Prototypes)
 * design layout wireframe will be created using draw.io and added here upon completion
+* ![](designDocuments/weatherWireframe.png)
 
 ### Implementation plan
 My plan for implementation will go as follows:

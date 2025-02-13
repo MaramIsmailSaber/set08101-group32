@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'EngraversOldEnglish';
+    src: url('resources/OPTIEngraversOldEnglish.otf')
+}
+
+h1{
+    font-family: 'EngraversOldEnglish';
+}
