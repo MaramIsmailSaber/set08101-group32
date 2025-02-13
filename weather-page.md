@@ -6,7 +6,9 @@
 * https://news.sky.com/
 
 * Not fully decied on how to implement a weather map yet, but i have found a few different libraries and other useful functions that may be helpful:
-* * 
+* * https://www.youtube.com/watch?v=Ma_tIbGV4m4
+* * https://happycoding.io/tutorials/javascript/libraries/simple-weather-map
+* * https://docs.maptiler.com/sdk-js/modules/weather/
   
 ### Inspiration
 * for design we decided to steer away from modern news websites as we believe they all look the same, awfuly basic.
