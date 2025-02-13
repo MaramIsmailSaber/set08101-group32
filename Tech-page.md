@@ -2,13 +2,13 @@
 ## Tech News Page Plan
 ### Ideas & Research
 * I have come up with some ideas for what my website page might include
-** JavaScript usage could be making the content images larger when mouse hovers over it.
-** Shows latest tech new and breakthroughs with tech such as new GPUs, AI developments news related to that.
-** Have different topics that can be filtered by topic tag.
-** Have a support message function for asking questions.
-** Have a video section on a ribbon in between the page.
-** Have a subscribe button which opens a form to sign up to the tech page.
-** Implement an image slide which shows different articles with their related image.
+* JavaScript usage could be making the content images larger when mouse hovers over it.
+* Shows latest tech new and breakthroughs with tech such as new GPUs, AI developments news related to that.
+* Have different topics that can be filtered by topic tag.
+* Have a support message function for asking questions.
+* Have a video section on a ribbon in between the page.
+* Have a subscribe button which opens a form to sign up to the tech page.
+* Implement an image slide which shows different articles with their related image.
 
 
 ### Websites that I used for research
