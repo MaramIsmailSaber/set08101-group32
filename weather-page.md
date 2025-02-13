@@ -4,6 +4,9 @@
 * reviewed a number other news websites to get a feel for what content to include, and for ideas on layout. Sites include:
 * https://www.bbc.co.uk/
 * https://news.sky.com/
+
+* Not fully decied on how to implement a weather map yet, but i have found a few different libraries and other useful functions that may be helpful:
+* * 
   
 ### Inspiration
 * for design we decided to steer away from modern news websites as we believe they all look the same, awfuly basic.
