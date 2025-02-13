@@ -3,7 +3,7 @@
 ---
 # **News Page**
 ### Roles:
-- Maram: Music page
+- Maram: Entertainment
 - Tala: Sports Page
 - David B: Tech Page
 - David A: Home/Index Page
