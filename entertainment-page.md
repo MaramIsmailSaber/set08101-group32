@@ -1,3 +1,9 @@
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2F2017%2F06%2F15%2Finsider%2F1967-a-modern-identity-takes-form-in-ancient-lettering.html&psig=AOvVaw3uR_vDQIKhZnqVEbmg81Q0&ust=1739543101117000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDB_57twIsDFQAAAAAdAAAAABAJ
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.historic-newspapers.com%2Fold-newspapers%2Fnew-york-times-archives%2F&psig=AOvVaw3uR_vDQIKhZnqVEbmg81Q0&ust=1739543101117000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDB_57twIsDFQAAAAAdAAAAABAT
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fstablediffusionweb.com%2Fimage%2F16816148-vintage-new-york-times-featuring-pipe-organ-ad&psig=AOvVaw3uR_vDQIKhZnqVEbmg81Q0&ust=1739543101117000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDB_57twIsDFQAAAAAdAAAAABAd
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.businessinsider.com%2Fdisney-plus-streaming-website-app-screenshots-pictures-walkthrough-2019-11&psig=AOvVaw0Qw07I-sHfsgtWXTH49jl1&ust=1739544254427000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLipxL7xwIsDFQAAAAAdAAAAABBS
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FNetflix-home-page-after-scrolling-down_fig7_338901579&psig=AOvVaw1rVu6WeEoaelax60aJdK1u&ust=1739543625370000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIjWgJLvwIsDFQAAAAAdAAAAABAZ
+https://www.vogue.co.uk/fashion
+https://www.elle.com/uk/
+https://www.cosmopolitan.com/uk/
+https://www.apple.com/uk/ipad-pro/
