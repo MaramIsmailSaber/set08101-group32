@@ -1,5 +1,8 @@
 # This is a log for all our meetings.
 ### 06/02/2025 (4-6pm)
+* Jared did not attend
+
+   However he did interact with us online.
 1. Decided on news page.
 2. Started assigning roles.
 3. Decided on theme: Old New York Times Style.
@@ -20,7 +23,7 @@
 ### 13/02/2025 (2-4pm)
 * David A did not attend.
 
-  However he gave an update of him working on his design for his page? 
+  However he gave an update of him working on his design for his page.
 1. Continuing progress on issue [#1](https://github.com/MaramIsmailSaber/set08101-group32/issues/1).
 
    Making sure everyone is on track for their reports.
