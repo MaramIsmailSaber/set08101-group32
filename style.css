@@ -22,6 +22,7 @@ body {
     max-width: 1200px; /* Optional: Limits max width for very large screens */
     padding: 20px;
     text-align: center; /* Center all text inside the container */
+    margin-top: 50px;
 }
 
 h1 {
@@ -62,5 +63,43 @@ h2, h3 {
     font-style: italic;
 }
 
+nav {
+    background-color: rgba(193, 186, 175, 0.83); /* Navbar background */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full-width navbar */
+    z-index: 1000; /* Layer on top of other content */
+    padding: 10px 0; /* Add vertical padding */
+}
 
+.nav-container {
+    max-width: 1200px; /* Limit the width of the content inside the navbar */
+    margin: 0 auto; /* Center the navbar content */
+    display: flex; /* Flexbox layout for alignment */
+    justify-content: space-between; /* Push left and right sections apart */
+    align-items: center; /* Vertically center items */
+    padding: 0 20px; /* Padding inside the navbar */
+}
 
+.nav-left {
+    flex: 1; /* Take up space on the left */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to move it away from the edge */
+}
+
+.nav-left h1 {
+    margin: 0; /* Remove default margin */
+}
+
+.nav-right {
+    flex: 1; /* Take up space on the right */
+    text-align: right; /* Align text to the right */
+    padding-right: 20px; /* Add padding to move it away from the edge */
+    font-size: 1rem; /* Adjust font size */
+    color: #3e2a1f; /* Match text color */
+}
+
+.nav-right p {
+    margin: 0; /* Remove default margin */
+}

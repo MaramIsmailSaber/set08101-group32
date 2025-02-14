@@ -9,7 +9,22 @@
 <body>
 <div class="container">
     <header>
-        <h1>Sage<span class="inverted-box">News</span></h1>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-left">
+                    <h1>Sage<span class="inverted-box">News</span></h1>
+                </div>
+                <div class="nav-right">
+                    <p id="time">
+                        Time: Loading
+                    </p>
+                    <p>
+                        Location: Edinburgh
+                    </p>
+                </div>
+            </div>
+        </nav>
+
         <p>Immerse yourself in the charm of old New York with this classic, faded paper-style background.</p>
     </header>
 
@@ -24,5 +39,26 @@
         <p>Typewriters once filled the offices of journalists, authors, and everyday New Yorkers. They were the pulse of communication before the age of computers. Feel the nostalgia through stories and quotes typed on an old-fashioned machine.</p>
     </section>
 </div>
+<script>
+    function updateTime() {
+        const timeElement = document.getElementById('time');
+        const now = new Date();
+
+        // Format the time in HH:MM:SS AM/PM format
+        const hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const amPm = hours >= 12 ? 'PM' : 'AM';
+
+        const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
+        timeElement.textContent = `Time: ${formattedTime}`;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+
+    // Initialize the time immediately
+    updateTime();
+</script>
 </body>
 </html>
