@@ -1,8 +1,66 @@
 @font-face {
     font-family: 'EngraversOldEnglish';
-    src: url('resources/OPTIEngraversOldEnglish.otf')
+    src: url('resources/OPTIEngraversOldEnglish.otf');
 }
 
-h1{
-    font-family: 'EngraversOldEnglish';
+body {
+    background-color: rgba(193, 186, 175, 0.83); /* Very light beige, more subdued vintage feel */
+    color: #3e2a1f; /* Dark brown text for a vintage, easy-to-read look */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Full viewport height */
+
 }
+
+.container {
+    width: 60%; /* Set width of the content */
+    max-width: 1200px; /* Optional: Limits max width for very large screens */
+    padding: 20px;
+    text-align: center; /* Center all text inside the container */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3e2a1f; /* Dark brown for headers */
+    margin-top: 20px; /* Reduced the margin at the top */
+    font-family: "EngraversOldEnglish"; /* Elegant, vintage font */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    text-align: left; /* Align the text to the left */
+    padding-left: 5%; /* Add some left padding to move it more left */
+}
+
+span.inverted-box {
+    background-color: #3e2a1f; /* Dark brown background for the box */
+    color: rgba(193, 186, 175, 0.83); /* Light text color (inverted) */
+    padding: 5px 5px; /* Add some padding to create a box around the text */
+    margin-left: 0px; /* Space between "Sage" and "Daily" */
+    border-radius: 10px; /* Optional: rounded corners for the box */
+    font-weight: bold; /* Optional: make "Daily" bold */
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    max-width: 800px; /* Maximum width for readability */
+    margin: 20px auto;
+    padding: 15px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0); /* Very subtle shadow */
+}
+
+/* Optional: Slight texture feel to keep it vintage but still light */
+h1, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+}
+
+h2, h3 {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+
+
+
