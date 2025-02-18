@@ -41,7 +41,7 @@ These websites provided inspiration for the layout, features, and content struct
 ### Design
 * I will make a wireframe of my website using draw.io.
 
-
-### Implementation
-* The first step I will do would be making basic functionality like getting the HTML, CSS and the basic layout of the page working.
-* Then I would add the CSS style to the website and add the functionality I will use with the JavaScript.
+### Implementation Plan
+1. **Basic Layout**: Start by implementing the basic HTML structure and CSS styles for the layout.
+2. **JavaScript**: Add interactivity using JavaScript, like hover effects and dynamic content like image sliders or videos and interactive buttons.
+3. **Styling**: Apply the design styles based on the New York Times aesthetic, ensuring fonts, colors, and layouts align with the theme.
