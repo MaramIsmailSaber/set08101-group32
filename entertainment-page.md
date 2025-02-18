@@ -19,17 +19,33 @@ These are just two websites that I think are very cool and are honestly there to
 ![alt text](<Screenshot 2025-02-17 201921.png>) 
 ![alt text](<Screenshot 2025-02-17 202120.png>)
 
+These are two current "successful" news websites.
+![alt text](image.png)
+![alt text](image-1.png)
+
 # Ideas
 
-At the moment there are a few ideas I have in mind.
-
-My favourite which I really hope we can implement is:
+At the moment my favourite idea is:
 
     We have the whole page in beige and brown (As seen in the playing-around-branch), and only when the mouse hovers over the pictures do the colours come to life.
         ^This is in terms of colour schemes.
+    I want it to be very simple looking like the inpo pics above with certain pictures bigger than others so that they pop out.
     
     As for layout & design, I want the page to be divided into different layers/sections: music/films/fashion/celebrities.
         Wether they will all be on the same page or will I have a different page for each, honestly not sure yet. (to be contiued...)
     Somewhere at the top of the page there will be one of those sliding news shows things idk what they are called, that shows the latest news.
 
     I am still not sure if I want it to look like a newspaper with columns or more like a news website with rows with different stories.
+
+# Wireframes/templates/prototypes
+No wireframe at this point because I cannot make up my mind and decide.
+
+# Plan to implement HTML/CSS/JS
+
+HTML: The web page (possibly multiple)
+CSS: As mentioned above and shown in the inspo pages, style the page
+JS: As mentioned above and shown in the inspo pages.
+    I think the biggest JS & CSS implementations will be the page staying in two colours then the colour changing as you hover over it.
+
+# Any additional features or Ideas
+None at the moment
