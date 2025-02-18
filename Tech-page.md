@@ -10,6 +10,9 @@
 * Have a subscribe button which opens a form to sign up to the tech page.
 * Implement an image slide which shows different articles with their related image.
 
+For the design we have decided to aim for a old style New York Times paper look and will try to replicate its fonts, design and layout:
+![Alt text](<Old New York Times.jpg>)
+
 
 ### Websites that I used for research
 * https://www.reuters.com/technology/  
