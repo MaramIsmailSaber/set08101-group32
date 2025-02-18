@@ -13,13 +13,26 @@
 For the design we have decided to aim for a old style New York Times paper look and will try to replicate its fonts, design and layout:
 ![Alt text](<Old New York Times.jpg>)
 
+### Examples of Popular Tech News Websites
+I have found some examples of websites that align with my research for design and content:
 
-### Websites that I used for research
-* https://www.reuters.com/technology/  
-* https://www.bbc.co.uk/news/technology   
-* https://www.wired.com/  
-* https://news.sky.com/science-climate-tech 
+#### 1. **Reuters Technology**
+   
+   ![Reuters Tech News Screenshot](<Screenshot 2025-02-18 202603.png>)
 
+#### 2. **BBC Technology News**
+   
+   ![BBC Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+
+#### 3. **Wired Technology News**
+  
+   ![Wired Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+
+#### 4. **Sky News Technology**
+ 
+   ![Sky News Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+
+These websites provided inspiration for the layout, features, and content structure I plan to implement.
 
 ### Design
 * I will make a wireframe of my website using draw.io.
