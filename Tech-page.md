@@ -32,6 +32,10 @@ I have found some examples of websites that align with my research for design an
  
    ![Sky News Technology Screenshot](<Screenshot 2025-02-18 202925.png>)
 
+#### 5. **New York Times Technology**
+ 
+   ![New York Times Technology Screenshot](<Screenshot 2025-02-18 224154.png>)
+
 These websites provided inspiration for the layout, features, and content structure I plan to implement.
 
 ### Design
