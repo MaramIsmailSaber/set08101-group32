@@ -22,15 +22,15 @@ I have found some examples of websites that align with my research for design an
 
 #### 2. **BBC Technology News**
    
-   ![BBC Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+   ![BBC Technology Screenshot](<Screenshot 2025-02-18 202643.png>)
 
 #### 3. **Wired Technology News**
   
-   ![Wired Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+   ![Wired Technology Screenshot](<Screenshot 2025-02-18 202835.png>)
 
 #### 4. **Sky News Technology**
  
-   ![Sky News Technology Screenshot](<Screenshot 2025-02-18 202603.png>)
+   ![Sky News Technology Screenshot](<Screenshot 2025-02-18 202925.png>)
 
 These websites provided inspiration for the layout, features, and content structure I plan to implement.
 
