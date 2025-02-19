@@ -26,7 +26,7 @@ I have found some examples of websites that align with my research for design an
 
 #### 3. **Wired Technology News**
   
-   ![Wired Technology Screenshot](<Screenshot 2025-02-18 202835.png>)
+   ![Wired Technology Screenshot](<Design/Screenshot 2025-02-18 202835.png>)
 
 #### 4. **Sky News Technology**
  
@@ -39,7 +39,9 @@ I have found some examples of websites that align with my research for design an
 These websites provided inspiration for the layout, features, and content structure I plan to implement.
 
 ### Design
-* I will make a wireframe of my website using draw.io.
+* I will make a wireframe for my page.
+
+  ![Tech Page Wireframe](<Design/Tech Page Wireframe.png>)
 
 ### Implementation Plan
 1. **Basic Layout**: Start by implementing the basic HTML structure and CSS styles for the layout.
