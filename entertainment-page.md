@@ -1,11 +1,11 @@
 # Research & Inspo:
 
 This is the main theme, we were inspired by old looking The New York Times newspapers. If possible we would like to attempt to recreate the colours, font and style in website form.
-![](randomImages\oldnewyorktimes.png) 
+![](randomImages/oldnewyorktimes.png) 
 These are already existing & successful entertainment/pop/fashion pages:
-![alt text](randomImages\vogue.png) 
-![alt text](randomImages\cosmopolitan.png) 
-![alt text](randomImages\elle.png)
+![](randomImages/vogue.png) 
+![](randomImages/cosmopolitan.png) 
+![](randomImages/elle.png)
 ^ One common theme you see in all of them is they are very basic & simple with different elements at the center to grab attention. Black and white and the pictures bring in all the colour.
 
     This works well with the theme discussed above, by keeping it basic black and white (ish) and then the different pictures bring in the colour.
@@ -13,15 +13,15 @@ This is the current The New York Times website, to see how it has been implement
 ![alt text](randomImages\Screenshot 2025-02-17 201240.png) 
 
 This website I feel is a modern spin on The New York Times website, which we can use to join both elements to bring a timeless experience to viewers.
-![alt text](randomImages\historicnewspapers.png) 
-![alt text](randomImages\historicnewspapers1.png) 
+![ ](randomImages/historicnewspapers.png) 
+![ ](randomImages/historicnewspapers1.png) 
 These are just two websites that I think are very cool and are honestly there to inspire me to do more (though I doubt)
-![alt text](randomImages\apple.png) 
-![alt text](randomImages\netflix.png)
+![ ](randomImages/apple.png) 
+![ ](randomImages/netflix.png)
 
 These are two current "successful" news websites.
-![alt text](randomImages\bbcnews.png)
-![alt text](randomImages\skynews.png)
+![ ](randomImages/bbcnews.png)
+![ ](randomImages/skynews.png)
 
 # Ideas
 
