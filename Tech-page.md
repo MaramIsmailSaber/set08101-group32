@@ -11,37 +11,37 @@
 * Implement an image slide which shows different articles with their related image.
 
 For the design we have decided to aim for a old style New York Times paper look and will try to replicate its fonts, design and layout:
-![Alt text](<Old New York Times.jpg>)
+![Old New York Times ](randomImages/Old New York Times.jpg)
 
 ### Examples of Popular Tech News Websites
 I have found some examples of websites that align with my research for design and content:
 
 #### 1. **Reuters Technology**
    
-   ![Reuters Tech News Screenshot](<Screenshot 2025-02-18 202603.png>)
+   ![Reuters Tech News Screenshot](randomImages/reuters.png)
 
 #### 2. **BBC Technology News**
    
-   ![BBC Technology Screenshot](<Screenshot 2025-02-18 202643.png>)
+   ![BBC Technology Screenshot](randomImages/bbcnews1.png)
 
 #### 3. **Wired Technology News**
   
-   ![Wired Technology Screenshot](<Design/Screenshot 2025-02-18 202835.png>)
+   ![Wired Technology Screenshot](randomImages/wired.png)
 
 #### 4. **Sky News Technology**
  
-   ![Sky News Technology Screenshot](<Screenshot 2025-02-18 202925.png>)
+   ![Sky News Technology Screenshot](randomImages/skynews1.png)
 
 #### 5. **New York Times Technology**
  
-   ![New York Times Technology Screenshot](<Screenshot 2025-02-18 224154.png>)
+   ![New York Times Technology Screenshot](randomImages/newyorktimestech.png)
 
 These websites provided inspiration for the layout, features, and content structure I plan to implement.
 
 ### Design
 * I will make a wireframe for my page.
 
-  ![Tech Page Wireframe](<Design/Tech Page Wireframe.png>)
+  ![Tech Page Wireframe](designDocuments/Tech%20Page%20Wireframe.png)
 
 ### Implementation Plan
 1. **Basic Layout**: Start by implementing the basic HTML structure and CSS styles for the layout.
