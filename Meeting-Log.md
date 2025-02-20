@@ -29,3 +29,5 @@
    Making sure everyone is on track for their reports.
 
    Nothing new added.
+### 18/02/2025 & 20/02/2025
+we agreed no need for meetings as everyone just gets on with their reports, if anything needed contact through whatsapp.
