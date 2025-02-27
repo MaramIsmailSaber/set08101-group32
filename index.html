@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> SET08101 - Web Tech</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <h1> Hello group 32!</h1>
-        <h2> We got this! </h2>
-    </body>
+<html lang="en">
+<head>
+    <!-- Metadata and linking the external CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SageNews</title>
+    <link rel="stylesheet" href="style.css">
+</head>>
+<body>
+<!-- Header section containing the logo, date, and navigation menu -->
+<header>
+    <div class = "logo">SageNews</div>
+    <div class="date" id="current-date"></div>
+    <button id="dark-mode-toggle">Dark Mode</button>
+    <input type="text" id="search-bar" placeholder="Search...">
+    <nav>
+        <ul>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Entertainment</a></li>
+        </ul>
+    </nav>
+</header>>
+<!--main content-->
+<main>
+    <section class="Headline">
+        <h1>Breaking News: Major Event Unfolds</h1>
+        <p class="Subheadline">A detailed report on breaking news...</p>
+        <img src="headline.jpg" alt="Headline Image">
+        <p class="read-time" id="read-time"></p> <!-- Read Time Indicator -->
+    </section>
+    <section class="news-grid">
+        <article>
+            <h2>Article Title 1</h2>
+            <p>Brief Summary of the news article...</p>
+            </article>
+        <article>
+            <h2>Article Title 2</h2>
+            <p>Another important story...</p>
+        </article>
+        <article>
+            <h2>Article Title 3</h2>
+            <p>Updates on recent events...</p>
+        </article>
+    </section>
+
+    <!-- Load More Articles Button -->
+    <button id="load-more">Load More</button>
+    <aside class="Sidebar">
+        <h3>Trending Now</h3>
+        <ul>
+            <li><a href="#">Trending Story 1</a></li>
+            <li><a href="#">Trending Story 2</a></li>
+            <li><a href="#">Trending Story 3</a></li>
+        </ul>
+        </aside>
+</main>
+
+<!--footer -->
+<footer>
+    <p>&copy; 2025 SageNews. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
