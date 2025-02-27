@@ -2,6 +2,7 @@
 
 ## Ideas & Research
 - **Inspired by The New York Times** homepage layout.
+- ![img.png](img.png)
 - **Urgent news pop-up** for breaking news.
 - **Responsive design** – layout adapts for different devices.
 - **Hover effect for images** – images enlarge when hovered over.
@@ -25,6 +26,7 @@
 
 ### **4. Responsive Approach**
 - **Mobile-first design**: Optimize for smaller screens first, then scale up.
+- ![img_1.png](img_1.png)
 - Adjust font sizes, images, and layout dynamically.
 - Ensure accessibility (contrast, readable fonts, alt text for images).
 
