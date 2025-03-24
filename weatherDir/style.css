@@ -69,7 +69,8 @@ nav {
 	border-width: 1.5px;
 	border-color: black;
 	
-	
+	padding: 5px;
+	margin-bottom: 5px;
 }
 nav ul {
 	list-style-type: none;
