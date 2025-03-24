@@ -1,0 +1,133 @@
+@font-face {
+	font-family: 'EngraversOldEnglish';
+	src: url('resources/OPTIEngraversOldEnglish.otf')
+}
+
+h1 {
+	font-family: EngraversOldEnglish;
+	margin-bottom: 30px;
+}
+
+a {
+	color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+	background-color: #f3dfc1;
+}
+
+header {
+	height: 120px;
+    background-color: #e0c9a6;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	text-align: center;
+}
+
+.headerLeft {
+	height: 40px;
+	width: 110px;
+	float: left;
+	position: absolute;
+	top: 17px;
+	left: 50px;
+	
+	text-align: center;
+	
+	border-style: solid;
+	border-width: 1px;
+}
+
+.headerRight {
+	height: 40px;
+	width: 110px;
+	float:right;
+	position: absolute;
+	top: 17px;
+	right: 50px;
+	
+	text-align: center;
+	
+	border-style: solid;
+	border-width: 1px;
+}
+
+nav {
+	height: 20px;
+	width: 100vw;
+	
+    background-color: #e0c9a6;
+	
+    text-align: center;
+    position: sticky;
+    top: 0;
+	
+	border-style: solid none solid none;
+	border-width: 1.5px;
+	border-color: black;
+	
+	
+}
+nav ul {
+	list-style-type: none;
+	Height: 100%;
+	padding-left: 0px;
+	margin: 0px;
+}
+nav ul li {
+	float: left;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+}
+nav ul li:hover {
+	background-color: #f3dfc1;
+}
+nav ul li a {
+	display: block;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+	padding-top: 0px;
+}
+
+.left-section, .middle-section, .right-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.left-section {
+    background-color: #eaeaea;
+}
+
+.middle-section {
+    background-color: #f9f9f9;
+}
+
+.right-section {
+    background-color: #eaeaea;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#map {
+    background-color: #ddd;
+    height: 300px;
+	/* width: 300px;*/
+    margin-bottom: 20px;
+}
