@@ -3,9 +3,9 @@
 	src: url('resources/OPTIEngraversOldEnglish.otf')
 }
 
-h1 {
-	font-family: EngraversOldEnglish;
-	margin-bottom: 30px;
+/*download a font for this. eg. georgia or Goudy Old Style*/
+p, a,  { 
+	font-family: georgian;
 }
 
 a {
@@ -25,6 +25,12 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
 	text-align: center;
+}
+
+header h1 {
+	font-family: EngraversOldEnglish;
+	margin-bottom: 30px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .headerLeft {
@@ -131,4 +137,28 @@ footer {
     height: 300px;
 	/* width: 300px;*/
     margin-bottom: 20px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.articleTemplate {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	
+	/*display: flex;
+	flex-wrap: wrap;*/
+}
+
+.articleTemplate h1, h2, h3 {
+	width: 100%;
+}
+
+.articleTemplate img {
+	width: 10vw;
+	height: 10vw;
+	
+	margin-right: 2vw;
+	float: left;
+	
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
