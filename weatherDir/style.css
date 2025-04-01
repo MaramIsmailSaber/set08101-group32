@@ -131,15 +131,24 @@ main {
 }
 
 footer {
+	position: relative;
     background-color: #333;
     color: white;
     /*text-align: center;*/
-    padding: 10px;
+    padding: 10px 0;
+	
+	overflow: hidden;
 	white-space: nowrap;
 	clear: both;
-	float: left;
+	/*float: left;*/
+	width: 100%;
 }
 
+#scroll {
+	display: inline-block;
+	padding-left: 100%;
+	/*font-size: px*/
+}
 
 #map {
     background-color: #ddd;
