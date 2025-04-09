@@ -1,0 +1,59 @@
+body {
+    background-color: rgba(193, 186, 175, 0.83); /* Very light beige */
+    color: #3e2a1f; /* Dark brown text */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding/border does not overflow */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
+.body-container {
+    max-width: 100%;
+    text-align: center;
+    padding-top: 50px; /* Adjust top padding for space below the fixed top-bar */
+}
+
+.top-bar {
+    background-color: #3e2a1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(193, 186, 175, 0.83);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center content */
+    padding: 5px 20px;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
+}
+
+.top-left h1 {
+    margin: 0;
+}
+
+.inverted-box {
+    background-color: rgba(193, 186, 175, 0.83);
+    color: #3e2a1f;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: column; /* Stack time and location vertically */
+    justify-content: center;
+    color: rgba(193, 186, 175, 0.83);
+}
+
+.top-right p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
