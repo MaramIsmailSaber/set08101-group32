@@ -62,7 +62,7 @@ header h1 {
 }
 
 nav {
-	height: 20px;
+	height: 30px;
 	width: 100vw;
 	
     background-color: #e0c9a6;
@@ -75,8 +75,7 @@ nav {
 	border-width: 1.5px;
 	border-color: black;
 	
-	padding: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 nav ul {
 	list-style-type: none;
@@ -121,6 +120,7 @@ main {
 }
 
 .right-section {
+	margin-top: 10px;
     background-color: #e0c9a6;
     overflow-y: auto;
     max-height: 600px;
