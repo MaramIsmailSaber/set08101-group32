@@ -6,7 +6,7 @@ function animate(element) {
     let elementWidth = element.offsetWidth;
     let parentWidth = element.parentElement.offsetWidth;
     let flag = 0;
-    const speed = 3; // Adjust this value to control the speed of scrolling
+    const speed = 2; // Adjust this value to control the speed of scrolling
     
     function step() {
         element.style.marginLeft = -flag + "px"; // move the element left by 'flag' px
