@@ -57,3 +57,15 @@ body {
     padding: 0;
     line-height: 1.1;
 }
+
+nav {
+    background-color: rgba(193, 186, 175, 0.83);
+    position:relative;
+    width: 100%;
+    display:flexbox;
+}
+
+.nav-items, a {
+    text-decoration: underline;
+    color: #3e2a1f;
+}
