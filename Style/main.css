@@ -36,6 +36,7 @@ body {
 
 .top-bar {
     background-color: #20150f;
+    ;
     position: fixed;
     height: fit-content;
     top: 0;
@@ -59,6 +60,7 @@ body {
 .inverted-box {
     background-color: rgba(193, 186, 175, 0.83);
     color: #20150f;
+    ;
     border-radius: 10px;
     font-weight: bold;
 }
@@ -95,13 +97,13 @@ nav {
 }
 
 .nav-items a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #20150f;
     font-weight: bold;
 }
 
 .footer {
-    background-color: #3e2a1f;
+    background-color: #20150f;
     color: rgba(193, 186, 175, 0.83);
     display: flex;
     justify-content: space-between;
