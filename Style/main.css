@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'EngraversOldEnglish';
+    src: url('resources/OPTIEngraversOldEnglish.otf');
+}
+
 body {
     background-color: rgba(193, 186, 175, 0.83);
     color: #20150f;
@@ -42,6 +47,7 @@ body {
     padding: 5px 20px;
     z-index: 1000;
     box-sizing: border-box;
+    font-family: "EngraversOldEnglish";
 }
 
 .top-left h1 {
