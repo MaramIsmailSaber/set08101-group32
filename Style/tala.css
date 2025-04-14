@@ -1,11 +1,15 @@
-body {
+/* body {
     font-family: 'Playfair Display', serif;
-    background: #fdfcf9;
+    background: #f9fdfa;
     color: #111;
     margin: 0;
     padding: 0;
-  }
+  } */
   
+  body {
+    background-color: #d41515;
+  }
+
   h1 {
     font-size: 3rem;
     margin: 20px;
