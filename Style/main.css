@@ -1,36 +1,29 @@
 body {
     background-color: rgba(193, 186, 175, 0.83);
-    /* Very light beige */
     color: #20150f;
-    /* Dark brown text */
     font-family: 'Courier New', Courier, monospace;
-    /* Typewriter-style font */
     height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure padding/border does not overflow */
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-    /* Inherit box-sizing from body */
 }
 
 .page-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Full viewport height */
 }
 
 .body-container {
     max-width: 100%;
     text-align: center;
     padding-top: 50px;
-    /* Adjust top padding for space below the fixed top-bar */
     flex: 1;
 }
 
@@ -46,11 +39,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Vertically center content */
     padding: 5px 20px;
     z-index: 1000;
     box-sizing: border-box;
-    /* Ensure padding does not cause overflow */
 }
 
 .top-left h1 {
@@ -68,7 +59,6 @@ body {
 .top-right {
     display: flex;
     flex-direction: column;
-    /* Stack time and location vertically */
     justify-content: center;
     color: rgba(193, 186, 175, 0.83);
 }
@@ -88,12 +78,9 @@ nav {
 .nav-items {
     display: flex;
     justify-content: space-evenly;
-    /* Even spacing between links */
     align-items: center;
     max-width: 1000px;
-    /* Optional: constrain max width */
     margin: 0 auto;
-    /* Center the nav-items container */
 }
 
 .nav-items a {
