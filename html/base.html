@@ -1,70 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sage News</title>
     <link rel="stylesheet" href="../style/main.css" />
 </head>
+
 <body>
-<div class="body-container">
-    <header>
-            <div class="top-bar">
-                <div class="top-left">
-                    <h1>Sage<span class="inverted-box">News</span></h1>
+    <div class="page-wrapper">
+        <div class="body-container">
+            <header>
+                <div class="top-bar">
+                    <div class="top-left">
+                        <h1>Sage<span class="inverted-box">News</span></h1>
+                    </div>
+                    <div class="top-right">
+                        <p id="time">
+                            Time: Loading
+                        </p>
+                        <p>
+                            Location: Edinburgh
+                        </p>
+                    </div>
                 </div>
-                <div class="top-right">
-                    <p id="time">
-                        Time: Loading
-                    </p>
-                    <p>
-                        Location: Edinburgh
-                    </p>
-                </div>
+                <nav class="nav-bar">
+                    <div class="nav-items">
+                        <div><a href="#">Home</a></div>
+                        <div><a href="#">Weather</a></div>
+                        <div><a href="#">Tech</a></div>
+                        <div><a href="#">Sports</a></div>
+                        <div><a href="#">Entertainment</a></div>
+                    </div>
+                </nav>
+
+                <p>Immerse yourself in the charm of old New York with this classic, faded paper-style background.</p>
+            </header>
+
+            <section class="content">
+                <h2>A Glimpse of Old New York</h2>
+                <p>From the bustling streets of Manhattan to the historic brownstones of Brooklyn, the legacy of old New
+                    York is a captivating story. Relive the essence of a city that never sleeps, where history, culture,
+                    and
+                    the rhythm of life blend in perfect harmony.</p>
+
+                <h3>Explore the Streets</h3>
+                <p>Walk through the cobbled streets of Greenwich Village, or take a step back in time with a visit to
+                    the
+                    Lower East Side, where immigrant stories come alive. Discover the beauty of the old city through
+                    vintage
+                    photographs and memories of a bygone era.</p>
+
+                <h3>Typewriter Heritage</h3>
+                <p>Typewriters once filled the offices of journalists, authors, and everyday New Yorkers. They were the
+                    pulse of communication before the age of computers. Feel the nostalgia through stories and quotes
+                    typed
+                    on an old-fashioned machine.</p>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <p>&copy; 2025 Sage News</p>
             </div>
-            <nav class="nav-bar">
-                <div class="nav-items">
-                    <div><a href="#">Weather</a></div>
-                    <div><a href="#">Tech</a></div>
-                    <div><a href="#">Sports</a></div>
-                    <div><a href="#">Entertainment</a></div>
-                </div>
-            </nav>
+            <div class="footer-right">
+                <p>Made with ❤️ in Edinburgh</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
 
-        <p>Immerse yourself in the charm of old New York with this classic, faded paper-style background.</p>
-    </header>
+            // Format the time in HH:MM:SS AM/PM format
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const amPm = hours >= 12 ? 'PM' : 'AM';
 
-    <section class="content">
-        <h2>A Glimpse of Old New York</h2>
-        <p>From the bustling streets of Manhattan to the historic brownstones of Brooklyn, the legacy of old New York is a captivating story. Relive the essence of a city that never sleeps, where history, culture, and the rhythm of life blend in perfect harmony.</p>
+            const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
+            timeElement.textContent = `Time: ${formattedTime}`;
+        }
+        // Update the time every second
+        setInterval(updateTime, 1000);
 
-        <h3>Explore the Streets</h3>
-        <p>Walk through the cobbled streets of Greenwich Village, or take a step back in time with a visit to the Lower East Side, where immigrant stories come alive. Discover the beauty of the old city through vintage photographs and memories of a bygone era.</p>
-
-        <h3>Typewriter Heritage</h3>
-        <p>Typewriters once filled the offices of journalists, authors, and everyday New Yorkers. They were the pulse of communication before the age of computers. Feel the nostalgia through stories and quotes typed on an old-fashioned machine.</p>
-    </section>
-</div>
-<script>
-    function updateTime() {
-        const timeElement = document.getElementById('time');
-        const now = new Date();
-
-        // Format the time in HH:MM:SS AM/PM format
-        const hours = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        const amPm = hours >= 12 ? 'PM' : 'AM';
-
-        const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
-        timeElement.textContent = `Time: ${formattedTime}`;
-    }
-
-    // Update the time every second
-    setInterval(updateTime, 1000);
-
-    // Initialize the time immediately
-    updateTime();
-</script>
+        // Initialize the time immediately
+        updateTime();
+    </script>
 </body>
+
 </html>
