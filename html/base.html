@@ -63,10 +63,7 @@
             const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
             timeElement.textContent = `Time: ${formattedTime}`;
         }
-        // Update the time every second
         setInterval(updateTime, 1000);
-
-        // Initialize the time immediately
         updateTime();
     </script>
 </body>
