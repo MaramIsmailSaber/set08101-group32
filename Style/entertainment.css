@@ -75,24 +75,20 @@
 
 .slideshow-wrapper {
     position: relative;
-    height: 75vh;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-    will-change: transform, opacity;
-    z-index: 1;
+    margin: 20px auto;
 }
 
 .slideshow-inner {
-    width: 100%;
-    height: 100%;
     position: relative;
+    height: 400px;
 }
 
 .slide {
+    display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
     width: 100%;
     height: 100%;
     transition: opacity 1s ease-in-out;
@@ -105,9 +101,10 @@
 }
 
 .slide.active {
+    display: block;
     opacity: 1;
-    z-index: 1;
 }
+
 
 .category-section {
     margin: 4rem 2rem;
@@ -152,6 +149,45 @@
     object-fit: cover;
 }
 
+/* Global section adjustments */
+.category-section.with-sticky-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.articles-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.article-card {
+    flex: 1 1 calc(25% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
 .card-caption {
     font-family: 'Roboto', sans-serif;
     padding: 0.75rem 1rem;
@@ -159,4 +195,55 @@
     font-size: 1rem;
     background-color: #fff;
     flex-grow: 1;
+}
+
+/* Sticky feature styles for 4th article in Global section */
+.sticky-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.sticky-wrapper {
+    position: sticky;
+    top: 80px;
+    /* adjust according to the navbar height */
+    flex: 0 0 300px;
+    /* you can adjust the width of the sticky section */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    align-items: flex-start;
+}
+
+.sticky-feature {
+    position: sticky;
+    top: 80px;
+    /* sticky position */
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-feature img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Make the sticky column fixed */
+.sticky-feature {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 80px;
 }
