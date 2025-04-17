@@ -54,6 +54,7 @@
   grid-column: 2 / 3; /* Assign to second column */
   width: 100%; /* Grid controls width */
   max-width: 450px; /* Ensure doesn't exceed max */
+  max-height: 700px;
   background-color: #f1f1f1;
   padding: 1rem;
   border-left: 1px solid #ddd;
@@ -210,7 +211,6 @@
 
 
 /* For smaller screens */
-/
 @media screen and (max-width: 1200px) {
     .content-wrapper {
         grid-template-columns: 1fr 350px; /* Narrow sidebar */
@@ -229,8 +229,12 @@
     .content-wrapper {
         grid-template-columns: 1fr 300px; /* Narrow sidebar */
     }
-     .right-content { max-width: 300px; }
-     .video-scrollable { width: 180px; }
+     .right-content { max-width: 300px;  overflow-y: visible; max-height: none; } /* show all content, no scroll bar */
+     .video-scrollable { width: auto; }
+	 .video-area {
+        grid-column: 1 / -1;    /* span both columns so it’s always visible */
+		justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -254,16 +258,16 @@
         margin-top: 1rem;
         max-width: none; /* Allow full width */
     }
-    .video-area {
-        flex-direction: column; /* Stack main video and list */
-        align-items: center; /* Centre items when stacked */
-    }
     .video-scrollable {
-        width: 90%; /* Wider scrollable video list */
-        max-width: 400px; 
-        border-left: none;
-        padding-left: 0;
-        margin-top: 1rem;
+        width: auto;
+		overflow-y: visible;
+		max-height:none;
+    }
+
+    /* <<< And here too */
+    .video-area {
+        grid-column: 1 / -1;    /* ensure it spans full width */
+		justify-content: center;
     }
     .left-content {
         grid-template-columns: repeat(2, 1fr); 
