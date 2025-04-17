@@ -152,7 +152,7 @@
 
 /* Video Section */
 .video-area {
-  grid-column: 1 / 2; /* Place this section ONLY in the first column */
+  grid-column: 1 / 2; /* Place this section only in the first column */
   display: flex;      /* Arrange main video and video list so they are side-by-side */
   flex-wrap: wrap;    /* Allow heading to wrap */
   align-items: flex-start;
@@ -263,8 +263,6 @@
 		overflow-y: visible;
 		max-height:none;
     }
-
-    /* <<< And here too */
     .video-area {
         grid-column: 1 / -1;    /* ensure it spans full width */
 		justify-content: center;
