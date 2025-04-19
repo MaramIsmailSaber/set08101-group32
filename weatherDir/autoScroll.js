@@ -1,23 +1,30 @@
-const scroll = document.getElementById("scroll");
+const scroll1 = document.getElementById("scroll");
+const scroll2 = document.getElementById("scrollCentre");
 
-animate(scroll);
+animateScroll(scroll1, scroll2);
 
-function animate(element) {
-    let elementWidth = element.offsetWidth;
-    let parentWidth = element.parentElement.offsetWidth;
-    let flag = 0;
-    const speed = 2; // Adjust this value to control the speed of scrolling
-    
+function animateScroll(element1, element2) {
+    const speed = 2;
+    let x1 = 0;
+    let x2 = element1.offsetWidth;
+
     function step() {
-        element.style.marginLeft = -flag + "px"; // move the element left by 'flag' px
-        flag += speed; // increment the flag faster by the 'speed' value
+		x1 -= speed;
+		x2 -= speed;
 
-        if (flag >= elementWidth) { // when the entire element has scrolled off the screen
-            flag = 0; // reset the flag to restart the scroll from the beginning
-        }
+    // When an element moves completely off-screen, reset its position to appear from the right
+		if (x1 <= -element1.offsetWidth) {
+			x1 = Math.max(x2, 0) + element2.offsetWidth; // Ensures proper placement after the second element
+		}
+		if (x2 <= -element2.offsetWidth) {
+			x2 = Math.max(x1, 0) + element1.offsetWidth; // Ensures smooth transition
+		}
 
-        requestAnimationFrame(step); // request the next frame
-    }
+		element1.style.transform = `translateX(${x1}px)`;
+		element2.style.transform = `translateX(${x2}px)`;
 
-    requestAnimationFrame(step); // start the animation
+		requestAnimationFrame(step);
+	}
+
+    requestAnimationFrame(step);
 }
