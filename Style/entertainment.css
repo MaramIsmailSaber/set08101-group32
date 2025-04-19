@@ -2,77 +2,6 @@
     text-decoration: underline;
 }
 
-.highlight {
-    background-color: black;
-    color: white;
-    padding: 0 8px;
-}
-
-/* Hero section */
-.hero {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-text {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    max-width: 400px;
-}
-
-.hero-text h2 {
-    margin: 0;
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
-}
-
-/* Article Grid */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 40px 60px;
-}
-
-.card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-    background: #fff;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    margin: 15px;
-    font-family: 'Playfair Display', serif;
-}
-
-.card p {
-    margin: 0 15px 15px;
-    font-size: 0.95rem;
-}
-
 .slideshow-wrapper {
     position: relative;
     width: 100%;
@@ -122,128 +51,113 @@
 .articles-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: space-between;
-}
-
-.article-card {
-    flex: 1 1 calc(25% - 1.5rem);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.article-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-/* Global section adjustments */
-.category-section.with-sticky-image {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: space-between;
-}
-
-.articles-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 10px;
+    margin-top: 50px;
     justify-content: space-between;
     flex: 1;
-}
-
-.article-card {
-    flex: 1 1 calc(25% - 1.5rem);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.article-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-caption {
-    font-family: 'Roboto', sans-serif;
-    padding: 0.75rem 1rem;
-    font-weight: 500;
-    font-size: 1rem;
-    background-color: #fff;
     flex-grow: 1;
 }
 
-/* Sticky feature styles for 4th article in Global section */
-.sticky-container {
+.article-card {
+    flex: 1 1 calc(25% - 1.5rem);
     display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-grow: 1;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     position: relative;
+    aspect-ratio: 3 / 4;
 }
 
-.sticky-wrapper {
-    position: sticky;
-    top: 80px;
-    /* adjust according to the navbar height */
-    flex: 0 0 300px;
-    /* you can adjust the width of the sticky section */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: flex-start;
-    margin-left: 2rem;
-    align-items: flex-start;
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sticky-feature {
-    position: sticky;
-    top: 80px;
-    /* sticky position */
-    height: auto;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.sticky-feature img {
+.article-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1rem 1rem 0 0;
+    z-index: 1;
 }
 
-/* Make the sticky column fixed */
-.sticky-feature {
-    position: -webkit-sticky;
-    /* For Safari */
-    position: sticky;
-    top: 80px;
+.card-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+
+.featured-article-wrapper {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    will-change: opacity, transform;
+}
+
+.featured-article-wrapper.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.featured-article-wrapper.visible {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.featured-inner {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .articles-row {
+        display: block;
+        gap: 20px;
+    }
+
+    .article-card {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+    }
+
+    .article-card+.article-card {
+        margin-top: 20px;
+    }
 }

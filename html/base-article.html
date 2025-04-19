@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage News</title>
+    <link rel="stylesheet" href="../style/main.css" />
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="body-container">
+            <header>
+                <div class="top-bar">
+                    <div class="top-left">
+                        <h1>Sage<span class="inverted-box">News</span></h1>
+                    </div>
+                    <div class="top-right">
+                        <p id="time">Time: Loading</p>
+                        <p>Location: Edinburgh</p>
+                    </div>
+                </div>
+                <nav class="nav-bar">
+                    <div class="nav-items">
+                        <div><a href="#">Home</a></div>
+                        <div><a href="#">Weather</a></div>
+                        <div><a href="#">Tech</a></div>
+                        <div><a href="#">Sports</a></div>
+                        <div><a href="#">Entertainment</a></div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <article id="article-content">
+                    <h1 id="article-title"></h1>
+                    <img id="article-image" alt="Article Image">
+                    <p id="article-text"></p>
+                </article>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <p>&copy; 2025 Sage News</p>
+            </div>
+            <div class="footer-right">
+                <p>Made with ❤️ in Edinburgh</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        function loadArticle(id) {
+            fetch('../articles/entertainment.json') // Fetch the JSON file (make sure the path is correct)
+                .then(response => response.json())
+                .then(articles => {
+                    const article = articles.find(a => a.id == id);
+
+                    if (article) {
+                        document.getElementById('article-title').innerText = article.title;
+                        document.getElementById('article-content').innerText = article.content;
+                    } else {
+                        document.getElementById('article-title').innerText = 'Article not found';
+                        document.getElementById('article-content').innerText = 'Sorry, this article is not available.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching article data:', error);
+                    document.getElementById('article-title').innerText = 'Error loading article';
+                    document.getElementById('article-content').innerText = 'Sorry, we encountered an error.';
+                });
+        }
+
+        window.onload = function () {
+            loadArticle(articleId);
+        };
+    </script>
+
+</body>
+
+</html>
