@@ -126,7 +126,10 @@ main {
     max-height: 600px;
 }
 
-.right-section:hover h2  {
+.right-section:hover h2 {
+	color: #8B0000;
+}
+.right-section:hover h1 {
 	color: #8B0000;
 }
 
