@@ -45,7 +45,7 @@
 }
 
 .category-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     border-left: 6px solid #a14cc1;
