@@ -12,7 +12,7 @@
 
 .slideshow-inner {
     position: relative;
-    height: 400px;
+    height: 600px;
 }
 
 .slide {
@@ -26,6 +26,11 @@
 .slide img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.slide:first-child img {
     object-fit: cover;
 }
 
@@ -114,19 +119,14 @@
 .featured-article-wrapper.visible {
     opacity: 1;
     transform: scale(1);
-}
-
-
-.featured-article-wrapper.visible {
-    opacity: 1;
-    transform: scale(1);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .featured-inner {
-    height: 400px;
+    height: 200%;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 
 .featured-single img {
@@ -144,6 +144,7 @@
     width: 100%;
     padding: 10px;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
