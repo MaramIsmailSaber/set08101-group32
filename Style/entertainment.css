@@ -35,6 +35,10 @@
     margin-top: 0;
 }
 
+.popup-content p {
+    font-size: 0.8rem;
+}
+
 .close-popup {
     position: absolute;
     top: 8px;
