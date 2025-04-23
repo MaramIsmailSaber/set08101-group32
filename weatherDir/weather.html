@@ -6,18 +6,35 @@
 	
     <title>Weather News</title>
 	
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="weather.css">
+	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="leafletjs/leaflet.css">
-	
-	<script src="autoScroll.js" defer></script>
 </head>
 <body>
+	<div class="page-wrapper">
     <header>
-        <p class="headerLeft">All the news fit to load</p>
-        <h1>Sage Daily // W eather N ews</h1>
-        <p class="headerRight">Date, Location, etc.</p>
-		
-		
+        <div class="top-bar">
+			<div class="top-left">
+				<h1>Sage<span class="inverted-box">News</span></h1>
+			</div>
+			<div class="top-right">
+				<p id="time">
+					Time: Loading
+				</p>
+				<p>
+					Location: Edinburgh
+				</p>
+			</div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Weather</a></div>
+                <div><a href="#">Tech</a></div>
+                <div><a href="#">Sports</a></div>
+                <div><a href="#">Entertainment</a></div>
+            </div>
+        </nav>
     </header>
     
     <main>
@@ -133,9 +150,34 @@
         </div>
 		
     </main>
-    <footer>
-        <p id="scroll">Weather Where You Are ⋅ Edinburgh City -- 6°C Rain ⋅ Inverness -- 7°C Cloudy ⋅ Glasgow -- 6°C Sun & Cloud ⋅ Dundee -- 5°C Sunny ⋅ Stornoway -- 6°C Cloudy ⋅ Dunfermline -- 4°C Sun & Cloud ⋅ </p>
+	<footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 Sage News</p>
+        </div>
+        <div class="footer-right">
+            <p>Made with ❤️ in Edinburgh</p>
+        </div>
     </footer>
-	
+	<script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+
+            // Format the time in HH:MM:SS AM/PM format
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const amPm = hours >= 12 ? 'PM' : 'AM';
+
+            const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
+            timeElement.textContent = `Time: ${formattedTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    <!--<footer>
+        <p id="scroll">Weather Where You Are ⋅ Edinburgh City -- 6°C Rain ⋅ Inverness -- 7°C Cloudy ⋅ Glasgow -- 6°C Sun & Cloud ⋅ Dundee -- 5°C Sunny ⋅ Stornoway -- 6°C Cloudy ⋅ Dunfermline -- 4°C Sun & Cloud ⋅ </p>
+    </footer>-->
+	</div>
 </body>
 </html>
