@@ -1,0 +1,40 @@
+/* Ensure html and body take up full height of the page */
+html, body {
+  height: 100%; /* Makes sure the body takes the full height */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Flexbox layout for page-wrapper */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the wrapper takes at least 100% of the height of the viewport */
+}
+
+/* Section will fill up available remaining space */
+.body-container {
+  flex-grow: 1; /* Makes sure this part of the page takes available space */
+}
+
+/* Center the article content */
+.article-wrapper {
+	padding-top: 30px;
+    display: flex;
+    justify-content: center; /* Align content to center horizontally */
+    align-items: flex-start; /* Align the content at the top of the page */
+    min-height: 100vh; /* Ensure the wrapper takes up at least the full height of the page */
+}
+
+/* The box that contains the article content */
+.article-content {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Add padding inside the box */
+    max-width: 800px; /* Limit the width of the article */
+    width: 100%; /* Ensure the width is flexible */
+    border-radius: 8px; /* Rounded corners */
+	min-height: 1000px; /* This ensures the article will always be at least 500px tall */
+	background-color: #f4f1ec;
+}
+
