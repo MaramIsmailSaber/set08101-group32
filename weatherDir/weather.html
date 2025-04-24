@@ -118,6 +118,13 @@
 
 							const aqi = pollutionData.list[0]?.main?.aqi;
 							const aqiText = ['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor'][aqi - 1] || 'Unknown';
+							
+							const iconCode = weatherData.weather[0].icon;
+							const iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
+							
+							const iconElement = document.getElementById('weatherIcon');
+							iconElement.src = iconURL;
+							iconElement.alt = weatherData.weather[0].description + ' icon';
 
 							const popupContent = `<b>${cityName}</b><br>${weather}<br>Temperature: ${temp}'C`;
 							L.popup()
@@ -143,7 +150,7 @@
 					const lon = e.latlng.lng;
 					getWeatherData(lat, lon);
 				});
-</script>
+				</script>
             </div>
 			
 			<div class="toggle-container">
@@ -153,7 +160,7 @@
 				<label class="layer-toggle"><input type="checkbox" id="tempToggle" onchange="toggleLayer('temp')"> Temperature </label>
 			</div>
 				
-            <img src="weather-icon.png" alt="Weather Icon">
+            <img id="weatherIcon" style="height: 50px; width: 50px;" src="resources/default.png" alt="Weather Icon">
             <p id="weatherParagraph">Press anywhere on the map for a full report.</p>
         </div>
 		
