@@ -69,8 +69,13 @@ nav ul li a {
 	display: block;
 }
 
+.body-container p {
+	text-align: left;
+}
+
 main {
 	display: flex;
+	height: 100%;
 	flex-wrap: wrap;
 	padding: 20px;
 	padding-top: 0;
@@ -84,24 +89,24 @@ main {
 	min-width: 300px;
 }
 
+.right-section {
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
 .middle-section {
 	overflow-y: auto;
-	max-height: 600px;
+	max-height: 80vh;
 }
 
-.right-section {
-	margin-top: 10px;
-	overflow-y: auto;
-	max-height: 600px;
-}
-
-.right-section:hover h2,
-.right-section:hover h1 {
+.middle-section:hover h2,
+.middle-section:hover h1 {
 	color: #8B0000;
 }
 
 footer {
-	position: relative;
+	position: sticky;
+	bottom: 0px;
 	padding: 10px 0;
 	overflow: hidden;
 	white-space: nowrap;
