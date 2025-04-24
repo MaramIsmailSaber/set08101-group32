@@ -34,6 +34,7 @@ body {
 
 .top-bar {
     background-color: #20150f;
+    ;
     position: fixed;
     height: fit-content;
     top: 0;
@@ -101,7 +102,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'EngraversOldEnglish', 'Courier New', Courier, monospace;
 }
 
 .footer-left,
