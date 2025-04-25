@@ -153,13 +153,13 @@ footer {
 
 #map {
 	background-color: #ddd;
-	height: 300px;
+	height: 350px;
 	margin-bottom: 20px;
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .articleTemplate {
-	margin: 0;
+	margin: 0px;
 	border: 0;
 	padding: 0;
 	border-top: 2px solid black;
@@ -169,6 +169,15 @@ footer {
 .articleTemplate h2,
 .articleTemplate h3 {
 	width: 100%;
+}
+
+img {
+  filter: grayscale(90%);
+  transition: filter 0.3s ease;
+}
+
+img:hover {
+  filter: grayscale(0%);
 }
 
 .articlePhoto,
