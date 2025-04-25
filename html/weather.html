@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic metadata setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weather News</title>
+    
+    <!-- Linking external stylesheets -->
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="leafletjs/leaflet.css">
+</head>
+<body>
+    <div class="page-wrapper">
+    <div class="body-container">
+    <header>
+        <!-- Top header bar containing site title and current time/location -->
+        <div class="top-bar">
+            <div class="top-left">
+                <h1>Sage<span class="inverted-box">News</span></h1>
+            </div>
+            <div class="top-right">
+                <p id="time">Time: Loading</p>
+                <p>Location: Edinburgh</p>
+            </div>
+        </div>
+
+        <!-- Navigation bar for site sections -->
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Weather</a></div>
+                <div><a href="#">Tech</a></div>
+                <div><a href="#">Sports</a></div>
+                <div><a href="#">Entertainment</a></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Left section: map and weather interaction -->
+        <div class="left-section">
+            <div id="map">
+                <!-- LeafletJS script for interactive maps -->
+                <script src="leafletjs/leaflet.js"></script>
+
+                <script>
+                    // Initialize the map centered over Scotland
+                    var map = L.map('map').setView([55.95, 5.20], 6);
+
+                    // Add base tile layer using OpenStreetMap
+                    var defaultLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+
+                    // API Key for OpenWeatherMap
+                    const apiKey = 'b23453628004d7a8fda86a426972fc12';
+
+                    // Define additional weather tile layers
+                    var windLayer = L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${apiKey}`);
+                    var rainLayer = L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`);
+                    var cloudLayer = L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${apiKey}`);
+                    var tempLayer = L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`);
+
+                    // Function to toggle map layers on or off
+                    function toggleLayer(type) {
+                        const layers = { wind: windLayer, rain: rainLayer, cloud: cloudLayer, temp: tempLayer };
+                        const layer = layers[type];
+                        if (map.hasLayer(layer)) {
+                            map.removeLayer(layer);
+                        } else {
+                            layer.addTo(map);
+                        }
+                    }
+
+                    // Fetch current weather and air pollution data for given lat/lon
+                    function getWeatherData(lat, lon) {
+                        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+                        const pollutionUrl = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+
+                        // Request both weather and pollution data concurrently
+                        Promise.all([
+                            fetch(weatherUrl).then(res => res.json()),
+                            fetch(pollutionUrl).then(res => res.json())
+                        ])
+                        .then(([weatherData, pollutionData]) => {
+                            console.log(weatherData, pollutionData);
+
+                            // Check if valid weather data exists
+                            if (weatherData.weather && weatherData.weather.length > 0) {
+                                const cityName = weatherData.name || 'the selected location';
+                                const weather = weatherData.weather[0].description;
+                                const temp = weatherData.main.temp;
+                                const humidity = weatherData.main.humidity;
+                                const windSpeed = weatherData.wind.speed;
+
+                                // Air Quality Index interpretation
+                                const aqi = pollutionData.list[0]?.main?.aqi;
+                                const aqiText = ['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor'][aqi - 1] || 'Unknown';
+
+                                // Set weather icon
+                                const iconCode = weatherData.weather[0].icon;
+                                const iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
+                                const iconElement = document.getElementById('weatherIcon');
+                                iconElement.src = iconURL;
+                                iconElement.alt = weather + ' icon';
+
+                                // Show popup on map
+                                const popupContent = `<b>${cityName}</b><br>${weather}<br>Temperature: ${temp}'C`;
+                                L.popup()
+                                    .setLatLng([lat, lon])
+                                    .setContent(popupContent)
+                                    .openOn(map);
+
+                                // Update text paragraph with full weather info
+                                weatherParagraph.innerHTML = `The weather at <b>${cityName}</b> is <b>${weather}</b> and a temperature of <b>${temp}°C</b>.<br>Humidity is <b>${humidity}%</b>, and the wind speed is <b>${windSpeed} m/s</b>.<br>Air quality is currently rated as <b>${aqiText}</b>.`;
+                            } else {
+                                weatherParagraph.textContent = 'Weather data unavailable for this location.';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching data:', error);
+                            weatherParagraph.textContent = 'Error fetching weather or air quality data.';
+                        });
+                    }
+
+                    // Listen for user map clicks to fetch weather data
+                    map.on('click', function (e) {
+                        const lat = e.latlng.lat;
+                        const lon = e.latlng.lng;
+                        getWeatherData(lat, lon);
+                    });
+                </script>
+            </div>
+
+            <!-- Layer toggle checkboxes -->
+            <div class="toggle-container">
+                <label class="layer-toggle"><input type="checkbox" id="windToggle" onchange="toggleLayer('wind')"> Wind </label>
+                <label class="layer-toggle"><input type="checkbox" id="rainToggle" onchange="toggleLayer('rain')"> Rain </label>
+                <label class="layer-toggle"><input type="checkbox" id="cloudToggle" onchange="toggleLayer('cloud')"> Cloud </label>
+                <label class="layer-toggle"><input type="checkbox" id="tempToggle" onchange="toggleLayer('temp')"> Temperature </label>
+            </div>
+
+            <!-- Weather icon and info paragraph -->
+            <img id="weatherIcon" style="height: 50px; width: 50px;" src="resources/default.png" alt="Weather Icon">
+            <p id="weatherParagraph">Press anywhere on the map for a full report.</p>
+        </div>
+		
+		<!-- Middle section: placeholder article -->
+        <div class="middle-section">
+            <h1>Breaking News</h1>
+			
+			<div class="articleTemplate">
+				<h2>Article Template Header!!!</h2>
+				<img src="resources/placeholder_hog.jpg" class="articlePhoto">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<img src="resources/placeholder_hog.jpg" class="articlePhotoRight" > 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+        </div>
+		
+		<!-- Right section: main article and additional placeholders -->
+		<div class="right-section">
+		
+			<div class="articleTemplate">
+				<h2>Will the Giant Highland Boars Migrate With the Changing Weather?</h2>
+				<img src="resources/breaking_hog.jpg" class="articlePhoto">
+				<p>In mid December of 2024, <a style = "white-space: nowrap;" href = "https://www.lbc.co.uk/news/people-scared-leave-their-homes-giant-feral-pigs-out-control-scottish-highlands/"> LBC </a> spoke to sheep farmer Fergus, who lives in the great glen. He claims that the giant boars living in the highlands are in the thousands in the Forrest of Dean alone. The boars are believed to be descendants of a handful of boar kept by highland farmers that unfortunately escaped a few years prior. The boars are dangerous and are believed to weigh between 80-100kg, and move at speeds of 20mph on even terrain.</p>
+				<img src="resources/breaking_hog2.jpg" class="articlePhotoRight" > 
+				<p>The fear among those who have run into the alleged car-sized boars is that they will begin to migrate south to more densely populated towns and villages in their search for food. Wild boar are not commonly known to migrate with the weather, but instead seek to satiate their appetite. As we welcome warmer weather, more vegetation will begin to grow across the land, and we can only imagine what will happen when the current supply of food in the north runs out.</p>
+			</div>
+			
+			<div class="articleTemplate">
+				<h2>Article Template Header!!!</h2>
+				<img src="resources/placeholder_hog.jpg" class="articlePhoto">
+				<p>Content...</p>
+				<img src="resources/placeholder_hog.jpg" class="articlePhotoRight" > 
+				<p>Content...</p>
+			</div>
+			
+			<div class="articleTemplate">
+				<h2>Article Template Header!!!</h2>
+				<img src="resources/placeholder_hog.jpg" class="articlePhoto">
+				<p>Content...</p>
+				<img src="resources/placeholder_hog.jpg" class="articlePhotoRight" > 
+				<p>Content...</p>
+			</div>
+			
+        </div>
+    </main>
+	
+	<!-- Footer section -->
+	<footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 Sage News</p>
+        </div>
+        <div class="footer-right">
+            <p>Made with ❤️ in Edinburgh</p>
+        </div>
+    </footer>
+	<!-- Script to update the time dynamically -->
+	<script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+
+            // Format the time in HH:MM:SS AM/PM format
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const amPm = hours >= 12 ? 'PM' : 'AM';
+
+            const formattedTime = `${hours % 12 || 12}:${minutes} ${amPm}`;
+            timeElement.textContent = `Time: ${formattedTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    <!--<footer>
+        <p id="scroll">Weather Where You Are ⋅ Edinburgh City -- 6°C Rain ⋅ Inverness -- 7°C Cloudy ⋅ Glasgow -- 6°C Sun & Cloud ⋅ Dundee -- 5°C Sunny ⋅ Stornoway -- 6°C Cloudy ⋅ Dunfermline -- 4°C Sun & Cloud ⋅ </p>
+    </footer>-->
+	</div>
+	</div>
+</body>
+</html>
