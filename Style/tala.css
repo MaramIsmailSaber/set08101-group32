@@ -63,20 +63,28 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
-.left-pool,
+.left-pool {
+  background: linear-gradient(to bottom, #761818, #d48e8e);
+  padding: 20px;
+  border-radius: 12px;
+}
+
 .upcoming-games {
-  background: #f2f2f2;
-  padding: 10px;
+  background: linear-gradient(to bottom, #761818, #d48e8e);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .main-news img {
   width: 100%;
-  max-height: 300px;
+  border-radius: 12px;
+  max-height: 450px;
   object-fit: cover;
 }
+
 
 .brands {
   grid-column: 2;
@@ -85,17 +93,18 @@ body {
   margin-top: 20px;
 }
 
+.brands img {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 450px;
+  object-fit: cover;
+}
+
 .feature {
   grid-column: 3;
   background: #f9f9f9;
   padding: 10px;
 }
-
-/* footer {
-  text-align: center;
-  padding: 10px;
-  background: #ddd;
-} */
 
 .feature-carousel {
   margin-top: 40px;
