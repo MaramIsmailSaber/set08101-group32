@@ -1,49 +1,63 @@
 /* General Reset */
 body {
   font-family: 'Playfair Display', serif;
-  background: #f9fdfa;
+  background: #fafafa;
   color: #111;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 20px;
-  font-weight: 700;
-}
-
-.top-nav {
+/* Header */
+.top-header {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  background: #eee;
+  align-items: center;
+  padding: 10px 20px;
+  background: #d1c0a8;
+}
+
+.top-header h1 {
+  font-size: 2rem;
+}
+
+/* Top Nav */
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .top-nav ul {
   display: flex;
-  gap: 20px;
   list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .search-box input {
-  padding: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
+/* Sports Nav */
 .sports-nav {
-  background: #ddd;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #b29b86;
+  padding: 10px 0;
 }
 
 .sports-nav ul {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   list-style: none;
+  gap: 20px;
   padding: 0;
+  margin: 0;
 }
 
+/* Grid Layout */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -51,86 +65,79 @@ h1 {
   padding: 20px;
 }
 
-.left-pool,
-.upcoming-games {
+/* Left Sidebar */
+.left-pool {
   background: #f2f2f2;
   padding: 10px;
+  border-radius: 10px;
+}
+
+.leaderboard {
+  padding-left: 20px;
+}
+
+/* Center Content */
+.main-center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .main-news img {
   width: 100%;
-  max-height: 300px;
+  border-radius: 12px;
+}
+
+/* Brands Scroll */
+.brands-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.brand-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.brand-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
-.brands {
-  grid-column: 2;
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
+.tag-btn {
+  margin-top: 5px;
+  padding: 2px 10px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #111;
+  border-radius: 20px;
 }
 
-.feature {
-  grid-column: 3;
+/* Upcoming Games */
+.upcoming-games {
   background: #f9f9f9;
   padding: 10px;
+  border-radius: 10px;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #ddd;
-}
-
-.feature-carousel {
+/* Moving Picture Section */
+.moving-picture {
+  padding: 20px;
   margin-top: 40px;
-  padding: 10px;
-  background: #f5f5f5;
 }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.carousel-track-container {
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  padding: 0;
-  margin: 0;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  list-style: none;
-}
-
-.carousel-slide img {
+.moving-picture img {
   width: 100%;
-  height: auto;
-  display: block;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
+  border-radius: 12px;
 }
