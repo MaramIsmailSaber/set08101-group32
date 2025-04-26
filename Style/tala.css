@@ -1,33 +1,48 @@
-body {
-  font-family: 'Playfair Display', serif;
-  background: #f9fdfa;
-  color: #111;
-  margin: 0;
-  padding: 0;
-}
-
 h1 {
   font-size: 3rem;
   margin: 20px;
   font-weight: 700;
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  background: #eee;
+body {
+  background-color: #ccc;
 }
 
-.top-nav ul {
+.top-bar {
+  height: 60px;
+  padding: 0 20px;
+}
+
+.search-bar-wrapper {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .search-box input {
-  padding: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
+
+.search-box button {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
 
 .sports-nav {
   background: #ddd;
@@ -41,6 +56,7 @@ h1 {
   gap: 30px;
   list-style: none;
   padding: 0;
+  font-weight: bold;
 }
 
 .grid-container {
@@ -75,11 +91,11 @@ h1 {
   padding: 10px;
 }
 
-footer {
+/* footer {
   text-align: center;
   padding: 10px;
   background: #ddd;
-}
+} */
 
 .feature-carousel {
   margin-top: 40px;
