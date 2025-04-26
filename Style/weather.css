@@ -172,7 +172,7 @@ footer {
 }
 
 img {
-  filter: grayscale(90%);
+  filter: grayscale(95%);
   transition: filter 0.3s ease;
 }
 
