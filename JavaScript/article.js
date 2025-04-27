@@ -1,3 +1,5 @@
+// Author: Maram Ismail
+
 // JS to not make 28!!!! individual html pages for all the articles. 
 //Probably could have used it or somthing similar to display the article cards rather than coding each one seperatetly.
 
