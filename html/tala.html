@@ -95,15 +95,20 @@
 
 
         <section class="main-news">
-          <img src="../assets/sports/main pic.jpg" alt="Football news image">
-          <p>Image of football latest news</p>
+          <img src="../assets/sports/main pic.jpg" id="mainNewsImage" alt="Football news image">
+          <div class="news-ticker">
+            <div class="ticker-content">
+              ⚽ Breaking: Real Madrid signs new player! ⚽ Latest: Manchester United unveils new stadium plans! ⚽
+              Transfer Rumors: Mbappé to Liverpool?
+            </div>
+          </div>
         </section>
         <section class="upcoming-games">
           <h3>Upcoming Games</h3>
 
           <div class="date-scroll-wrapper">
-            <button class="arrow-btn">‹</button>
-            <div class="date-scroll">
+            <button class="arrow-btn" onclick="scrollDates(-1)">‹</button>
+            <div class="date-scroll" id="dateScroll">
               <div class="date-item active">Today</div>
               <div class="date-item">Tomorrow</div>
               <div class="date-item">Sat 27</div>
@@ -112,8 +117,9 @@
               <div class="date-item">Tue 30</div>
               <div class="date-item">Wed 1</div>
             </div>
-            <button class="arrow-btn">›</button>
+            <button class="arrow-btn" onclick="scrollDates(1)">›</button>
           </div>
+
 
           <div class="matches-list">
             <div class="match">
@@ -258,6 +264,7 @@
     <div class="gif-bottom-right">
       <img src="your-gif.gif" alt="Fun gif">
     </div>
+    <script src="../html/tala.js"></script>
 
 </body>
 
