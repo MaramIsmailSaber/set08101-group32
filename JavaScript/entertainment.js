@@ -1,125 +1,130 @@
 // Author: Maram Ismail
 
-// Pop up JS
+// Popup JS 
 
+// Handles the display and hiding of a popup on first visit
 document.addEventListener("DOMContentLoaded", () => {
-    // Get the popup element by its ID "popup"
+    // Get the popup element and close button
     const popup = document.getElementById("popup");
-
-    // Get the button inside the popup that has the class "close-popup"
     const closeBtn = document.querySelector(".close-popup");
 
-    // Check if "popupShown" is NOT already saved in the browser's localStorage
+    // Show the popup only if it hasn't been shown before (check localStorage)
     if (!localStorage.getItem("popupShown")) {
-        // If not, show the popup by removing the "hidden" class
-        popup.classList.remove("hidden");
-        // And set "popupShown" to "true" in localStorage so it won't show again next time
-        localStorage.setItem("popupShown", "true");
+        popup.classList.remove("hidden");  // Show the popup
+        localStorage.setItem("popupShown", "true");  // Mark it as shown in localStorage
     }
 
-    // When the user clicks the close button:
+    // Close the popup when the close button is clicked
     closeBtn.addEventListener("click", () => {
-        // Add the "hidden" class back to the popup to hide it
-        popup.classList.add("hidden");
+        popup.classList.add("hidden");  // Hide the popup
     });
 
-    // Listen for any key press anywhere on the document
+    // Show the popup again if Ctrl + B is pressed (for demonstration)
     document.addEventListener("keydown", (e) => {
-        // If the user presses Ctrl + B (case insensitive)
         if (e.ctrlKey && e.key.toLowerCase() === "b") {
-            // Show the popup again by removing the "hidden" class
-            popup.classList.remove("hidden");
+            popup.classList.remove("hidden");  // Show the popup
         }
     });
+
+    // Long press to open the popup (for mobile and touch devices)
+    let pressTimer;
+    const longPressThreshold = 500; // Threshold for detecting a long press (in milliseconds)
+
+    // Detect long press on the entire document or a specific area
+    document.addEventListener('touchstart', (event) => {
+        pressTimer = setTimeout(() => {
+            // Trigger popup when long press is detected
+            popup.classList.remove("hidden");
+
+        }, longPressThreshold);
+    });
+
+    document.addEventListener('touchend', () => {
+        clearTimeout(pressTimer);  // Clear the timer if the user releases the touch before the threshold
+    });
+
+    document.addEventListener('touchcancel', () => {
+        clearTimeout(pressTimer);  // Clear the timer if the touch is interrupted (e.g., by scrolling)
+    });
+
 });
 
-// Slideshow JS
+// Slideshow JS 
 
-// Start by setting the current slide index to 0 (the first slide)
-let currentSlide = 0;
+// Handles the automatic slideshow of images
+let currentSlide = 0;  // Current slide index
+const slides = document.querySelectorAll('.slide');  // Select all slides
 
-// Select all elements with the class 'slide' and store them in a list
-const slides = document.querySelectorAll('.slide');
-
-// Function to show a specific slide
+// Function to display the slide based on its index
 function showSlide(index) {
-    // Go through every slide
     slides.forEach((slide, i) => {
-        // For each slide, add the 'active' class if it's the one matching the index, otherwise remove it
-        slide.classList.toggle('active', i === index);
+        slide.classList.toggle('active', i === index);  // Only add 'active' to the selected slide
     });
-    // Update the currentSlide to the new index
-    currentSlide = index;
+    currentSlide = index;  // Update the current slide index
 }
 
-// Function to go to the next slide
+// Move to the next slide every 2.5 seconds
 function nextSlide() {
-    // Calculate the next slide index, looping back to 0 when reaching the end
-    const nextIndex = (currentSlide + 1) % slides.length;
-    // Show the next slide
+    const nextIndex = (currentSlide + 1) % slides.length;  // Loop back to the first slide
     showSlide(nextIndex);
 }
 
-// Automatically move to the next slide every 2500 milliseconds (2.5 seconds)
-setInterval(nextSlide, 2500);
-
-// When the page content is fully loaded
+// Initialize the first slide when the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Display the first slide initially
     showSlide(currentSlide);
+    setInterval(nextSlide, 2500);  // Automatically change slides every 2500 ms
 });
 
+// Slideshow animation JS 
 
-// Slideshow animation JS
-
-// Select the wrapper around the slideshow
+// Adjusts the slideshow's appearance on scroll
 const slideshowWrapper = document.querySelector('.slideshow-wrapper');
 
-// When the user scrolls the page
+// Update the slideshow's scale and opacity based on scroll position
 window.addEventListener('scroll', () => {
-    // Get the vertical scroll distance in pixels
     const scrollTop = window.scrollY;
-    // Set the maximum scroll threshold (75% of the viewport height)
-    const maxScroll = window.innerHeight * 0.75;
+    const maxScroll = window.innerHeight * 0.75;  // 75% of the viewport height
+    const progress = Math.min(scrollTop / maxScroll, 1);  // Limit progress between 0 and 1
 
-    // Calculate progress as a number between 0 and 1
-    let progress = Math.min(scrollTop / maxScroll, 1);
+    const scale = 1 - progress * 0.3;  // Scale the slideshow down as you scroll
+    const opacity = 1 - progress;  // Reduce opacity as you scroll
 
-    // Make the slideshow slightly smaller as you scroll (down to 70% size)
-    const scale = 1 - progress * 0.3;
-    // Make the slideshow more transparent as you scroll (opacity goes to 0)
-    const opacity = 1 - progress;
-
-    // Apply the scaling and opacity to the slideshow wrapper
+    // Apply the transformation to the slideshow wrapper
     slideshowWrapper.style.transform = `scale(${scale})`;
     slideshowWrapper.style.opacity = opacity;
 });
 
-
 // Featured Article JS
 
-// Select the featured article wrapper element
+// Handles visibility change detection of the featured article
 const featured = document.querySelector('.featured-article-wrapper');
 
-// Create an IntersectionObserver to monitor visibility changes of the featured element
+// IntersectionObserver monitors when the 'featured' element becomes visible in the viewport
 const observer = new IntersectionObserver(
-    (entries) => { // The callback function that will run when visibility changes
+    (entries) => {
         entries.forEach(entry => {
-            // If the element is more than 30% visible in the viewport
-            if (entry.isIntersecting) {
-                // Add the 'visible' (CSS)
-                featured.classList.add('visible');
-            } else {
-                // Remove the 'visible' 
-                featured.classList.remove('visible');
-            }
+            // Add/remove the 'visible' class based on the visibility of the featured element
+            featured.classList.toggle('visible', entry.isIntersecting);
         });
     },
-    {
-        // This defines the threshold (visibility percentage) at which the callback triggers
-        threshold: 0.3 // 30% of the element must be visible before triggering
-    }
+    { threshold: 0.3 }  // Trigger when at least 30% of the element is visible
 );
 
-// Start observing the 'featured' element to track visibility
+// Start observing the 'featured' element
 observer.observe(featured);
+
+// Credit Icon JS 
+
+// Toggles visibility of photo credit text on mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const creditIcons = document.querySelectorAll('.credit-icon');
+
+    creditIcons.forEach(icon => {
+        icon.addEventListener('click', (event) => {
+            event.preventDefault();  // Prevent the default link action
+            event.stopPropagation();  // Prevent the click event from bubbling up
+
+            icon.classList.toggle('active');  // Toggle the visibility of the credit text
+        });
+    });
+});
