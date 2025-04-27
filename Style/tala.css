@@ -1,52 +1,6 @@
-/* for mobile phones */
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    padding: 10px;
-  }
-
-  .left-pool,
-  .upcoming-games,
-  .feature,
-  .brands {
-    margin-top: 0;
-    width: 100%;
-  }
-
-  .sports-nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .brands {
-    margin-top: 0;
-  }
-
-  .carousel-slide img {
-    height: auto;
-  }
-}
-
-/* for tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      "left middle"
-      "right right";
-    gap: 15px;
-  }
-
-  .brands {
-    margin-top: 0;
-  }
-}
-
-/* for desktops */
-@media (min-width: 1025px) {
-  .grid-container {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
+.page-wrapper {
+  transform: scale(0.9);
+  transform-origin: top center;
 }
 
 h1 {
