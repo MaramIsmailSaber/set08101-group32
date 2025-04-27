@@ -165,6 +165,63 @@ body {
     font-weight: bold;
   }
 
+  .left-pool {
+    background: linear-gradient(to bottom, #761818, #d48e8e);
+    padding: 20px;
+    border-radius: 12px;
+    height: 500px;
+    /* Fixed height */
+    overflow-y: auto;
+    /* SCROLL vertically */
+    box-sizing: border-box;
+  }
+
+  .leagues-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .league h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .club-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .club-box {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .club-box img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+
+  .club-name {
+    flex-grow: 1;
+    font-weight: 600;
+    color: #111;
+  }
+
+  .club-points {
+    font-weight: bold;
+    color: #111;
+  }
+
 }
 
 .upcoming-games {
