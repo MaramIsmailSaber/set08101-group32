@@ -1,3 +1,5 @@
+<!-- Author: Maram Ismail -->
+<!-- From <head> to <main> and <footer> is from the article.html and is the base we all used to have the same top bar, nav and footer -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +13,7 @@
 </head>
 
 <body>
+    <!-- A popup modal to declare the use of chatGPT (Just a fun silly little way to do it)-->
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <button class="close-popup">&times;</button>
@@ -43,16 +46,19 @@
                 </div>
                 <nav class="nav-bar">
                     <div class="nav-items">
-                        <div id="home"><a href="#">Home</a></div>
-                        <div id="weather"><a href="#">Weather</a></div>
-                        <div id="tech"><a href="#">Tech</a></div>
-                        <div id="sports"><a href="#">Sports</a></div>
+                        <div id="home"><a href="/index.html">Home</a></div>
+                        <div id="weather"><a href="weather.html">Weather</a></div>
+                        <div id="tech"><a href="tech-page.html">Tech</a></div>
+                        <div id="sports"><a href="tala.html">Sports</a></div>
                         <div id="entertainment"><a href="entertainment.html">Entertainment</a></div>
                     </div>
                 </nav>
             </header>
 
             <main>
+                <!-- Slideshow to show the most recent events,
+                        was going to replace it with a cinemagraph in mobile view,
+                            but it worked good in mobile view so I kept it the same.  -->
                 <section class="slideshow-wrapper">
                     <div class="slideshow-inner">
                         <div class="slide active">
@@ -93,6 +99,10 @@
                     </div>
                 </section>
 
+                <!-- Section of sections for all other articles -->
+                <!-- After setting up the JavaScript for loading all the different article html; 
+                    I should have probably implemented a similar method if possible
+                        for these article cards rather than doing them over and over again but oh well. -->
                 <section class="category-section">
                     <h2 class="category-title">Music</h2>
                     <div class="articles-row">
@@ -365,6 +375,7 @@
 
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-left">
             <p>&copy; 2025 Sage News</p>
@@ -374,6 +385,8 @@
         </div>
     </footer>
     </div>
+
+    <!-- The JavaScript comments are in the respective file -->
     <script src="../JavaScript/main.js"></script>
     <script src="../JavaScript/entertainment.js"></script>
 

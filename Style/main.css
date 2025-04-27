@@ -1,3 +1,6 @@
+/* Author: Maram Ismail */
+/* CSS for the base of all the pages, will be overriden accordingly in each individual page */
+
 @font-face {
     font-family: 'EngraversOldEnglish';
     src: url('../resources/OPTIEngraversOldEnglish.otf');
@@ -13,23 +16,15 @@ body {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+* {
     box-sizing: inherit;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
 .body-container {
     max-width: 100%;
     text-align: center;
     padding-top: 50px;
-    flex: 1;
 }
 
 .top-bar {
@@ -46,7 +41,6 @@ body {
     align-items: center;
     padding: 5px 20px;
     z-index: 1000;
-    box-sizing: border-box;
     font-family: "EngraversOldEnglish";
 }
 
@@ -57,7 +51,6 @@ body {
 .inverted-box {
     background-color: rgba(193, 186, 175, 0.83);
     color: #20150f;
-    ;
     border-radius: 10px;
     font-weight: bold;
 }
@@ -103,9 +96,5 @@ nav {
     align-items: center;
     padding: 10px 20px;
     font-family: 'EngraversOldEnglish', 'Courier New', Courier, monospace;
-}
-
-.footer-left,
-.footer-right {
     font-size: 0.9em;
 }
