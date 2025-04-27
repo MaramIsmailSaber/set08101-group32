@@ -25,6 +25,8 @@ body {
     max-width: 100%;
     text-align: center;
     padding-top: 50px;
+    min-height: 100vh;
+
 }
 
 .top-bar {
@@ -89,6 +91,7 @@ nav {
 }
 
 .footer {
+    margin-top: auto;
     background-color: #20150f;
     color: rgba(193, 186, 175, 0.83);
     display: flex;
