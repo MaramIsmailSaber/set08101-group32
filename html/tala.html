@@ -62,37 +62,62 @@
       <main class="grid-container">
         <section class="left-pool">
           <h3>Top Clubs</h3>
-          <div class="club-leaderboard">
 
-            <div class="club">
-              <div class="club-info">
-                <img src="../assets/logos/man-city.png" alt="Man City">
-                <span>Man City</span>
-              </div>
-              <div class="points">88 pts</div>
+          <div class="club-list">
+
+            <div class="club-item mancity">
+              <span class="club-name">Man City</span>
+              <span class="points">88 pts</span>
             </div>
 
-            <div class="club">
-              <div class="club-info">
-                <img src="../assets/logos/arsenal.png" alt="Arsenal">
-                <span>Arsenal</span>
-              </div>
-              <div class="points">86 pts</div>
+            <div class="club-item arsenal">
+              <span class="club-name">Arsenal</span>
+              <span class="points">86 pts</span>
             </div>
 
-            <div class="club">
-              <div class="club-info">
-                <img src="../assets/logos/liverpool.png" alt="Liverpool">
-                <span>Liverpool</span>
-              </div>
-              <div class="points">82 pts</div>
+            <div class="club-item liverpool">
+              <span class="club-name">Liverpool</span>
+              <span class="points">82 pts</span>
             </div>
 
-            <!-- More clubs -->
+            <div class="club-item astonvilla">
+              <span class="club-name">Aston Villa</span>
+              <span class="points">79 pts</span>
+            </div>
+
+            <div class="club-item tottenham">
+              <span class="club-name">Tottenham</span>
+              <span class="points">74 pts</span>
+            </div>
+
+            <div class="club-item chelsea">
+              <span class="club-name">Chelsea</span>
+              <span class="points">70 pts</span>
+            </div>
+
+            <div class="club-item newcastle">
+              <span class="club-name">Newcastle</span>
+              <span class="points">68 pts</span>
+            </div>
+
+            <div class="club-item manunited">
+              <span class="club-name">Man United</span>
+              <span class="points">65 pts</span>
+            </div>
+
+            <div class="club-item brighton">
+              <span class="club-name">Brighton</span>
+              <span class="points">62 pts</span>
+            </div>
+
+            <div class="club-item westham">
+              <span class="club-name">West Ham</span>
+              <span class="points">58 pts</span>
+            </div>
 
           </div>
-        </section>
 
+        </section>
 
         <section class="main-news">
           <img src="../assets/sports/main pic.jpg" id="mainNewsImage" alt="Football news image">
@@ -103,87 +128,110 @@
             </div>
           </div>
         </section>
-        <section class="upcoming-games">
-          <h3>Upcoming Games</h3>
 
-          <div class="date-scroll-wrapper">
-            <button class="arrow-btn" onclick="scrollDates(-1)">‹</button>
-            <div class="date-scroll" id="dateScroll">
-              <div class="date-item active">Today</div>
-              <div class="date-item">Tomorrow</div>
-              <div class="date-item">Sat 27</div>
-              <div class="date-item">Sun 28</div>
-              <div class="date-item">Mon 29</div>
-              <div class="date-item">Tue 30</div>
-              <div class="date-item">Wed 1</div>
-            </div>
-            <button class="arrow-btn" onclick="scrollDates(1)">›</button>
-          </div>
+        <div class="right-column">
+          <section class="upcoming-games">
+            <h3>Upcoming Games</h3>
 
-
-          <div class="matches-list">
-            <div class="match">
-              <div class="team">
-                <img src="../assets/sports/crystal-palace.jpg" alt="Crystal Palace logo">
-                <span>Crystal Palace</span>
+            <div class="date-scroll-wrapper">
+              <button class="arrow-btn" onclick="scrollDates(-1)">‹</button>
+              <div class="date-scroll" id="dateScroll">
+                <div class="date-item active">Today</div>
+                <div class="date-item">Tomorrow</div>
+                <div class="date-item">Sat 27</div>
+                <div class="date-item">Sun 28</div>
+                <div class="date-item">Mon 29</div>
+                <div class="date-item">Tue 30</div>
+                <div class="date-item">Wed 1</div>
               </div>
-              <span class="score"> 3 - 0 </span>
-              <div class="team">
-                <span>Aston Villa</span>
-                <img src="../assets/sports/Aston-Villa-.png" alt="Aston Villa logo">
-              </div>
+              <button class="arrow-btn" onclick="scrollDates(1)">›</button>
             </div>
 
-            <div class="match">
-              <div class="team">
-                <img src="../assets/sports/chelsea.jpg" alt="Chelsea logo">
-                <span>Chelsea</span>
-              </div>
-              <span class="score">1 - 0</span>
-              <div class="team">
-                <span>Everton</span>
-                <img src="../assets/sports/everton.png" alt="Everton logo">
-              </div>
-            </div>
 
-            <div class="match">
-              <div class="team">
-                <img src="../assets/sports/brighton-club.jpg" alt="Brighton logo">
-                <span>Brighton</span>
+            <div class="matches-list">
+              <div class="match">
+                <div class="team">
+                  <img src="../assets/sports/crystal-palace.jpg" alt="Crystal Palace logo">
+                  <span>Crystal Palace</span>
+                </div>
+                <span class="score"> 3 - 0 </span>
+                <div class="team">
+                  <span>Aston Villa</span>
+                  <img src="../assets/sports/Aston-Villa-.png" alt="Aston Villa logo">
+                </div>
               </div>
-              <span class="score">3 - 2</span>
-              <div class="team">
-                <span>West Ham</span>
-                <img src="../assets/sports/west-ham.png" alt="West Ham logo">
-              </div>
-            </div>
 
-            <div class="match">
-              <div class="team">
-                <img src="../assets/sports/newcastle.jpg" alt="Newcastle logo">
-                <span>Newcastle</span>
+              <div class="match">
+                <div class="team">
+                  <img src="../assets/sports/chelsea.jpg" alt="Chelsea logo">
+                  <span>Chelsea</span>
+                </div>
+                <span class="score">1 - 0</span>
+                <div class="team">
+                  <span>Everton</span>
+                  <img src="../assets/sports/everton.png" alt="Everton logo">
+                </div>
               </div>
-              <span class="score">3 - 0</span>
-              <div class="team">
-                <span>Ipswich Town</span>
-                <img src="../assets/sports/ipswich.png" alt="   Ipswich Town logo">
-              </div>
-            </div>
 
-            <div class="match">
-              <div class="team">
-                <img src="../assets/sports/southampton.png" alt="Southampton logo">
-                <span>Southampton</span>
+              <div class="match">
+                <div class="team">
+                  <img src="../assets/sports/brighton-club.jpg" alt="Brighton logo">
+                  <span>Brighton</span>
+                </div>
+                <span class="score">3 - 2</span>
+                <div class="team">
+                  <span>West Ham</span>
+                  <img src="../assets/sports/west-ham.png" alt="West Ham logo">
+                </div>
               </div>
-              <span class="score">1 - 2</span>
-              <div class="team">
-                <span>Fulham</span>
-                <img src="../assets/sports/fulham.jpg" alt="Fulham logo">
-              </div>
-            </div>
 
-          </div>
+              <div class="match">
+                <div class="team">
+                  <img src="../assets/sports/newcastle.jpg" alt="Newcastle logo">
+                  <span>Newcastle</span>
+                </div>
+                <span class="score">3 - 0</span>
+                <div class="team">
+                  <span>Ipswich Town</span>
+                  <img src="../assets/sports/ipswich.png" alt="   Ipswich Town logo">
+                </div>
+              </div>
+
+              <div class="match">
+                <div class="team">
+                  <img src="../assets/sports/southampton.png" alt="Southampton logo">
+                  <span>Southampton</span>
+                </div>
+                <span class="score">1 - 2</span>
+                <div class="team">
+                  <span>Fulham</span>
+                  <img src="../assets/sports/fulham.jpg" alt="Fulham logo">
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="football-video">
+            <h3>🎥 Football Highlights</h3>
+            <div class="video-container">
+              <iframe width="300" height="180" src="https://www.youtube.com/embed/WIaWTESJjrg"
+                title="Football Short Clips" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </section>
+        </div>
+
+
+        <section class="football-quiz">
+          <h3>⚽ Football Quiz of the Day</h3>
+          <p id="quiz-question">Loading question...</p>
+          <div id="quiz-options"></div>
+          <p id="quiz-feedback"></p>
         </section>
+
 
         <section class="brands">
           <div class="brand-card">
@@ -209,27 +257,14 @@
               <button class="tag-btn">Football Apparel</button>
             </div>
           </div>
+    </div>
+    </section>
 
-          <div class="brand-card">
-            <img src="../assets/sports/women pic football.jpg" alt="Item Image">
-            <div class="brand-content">
-              <p class="brand-title">Skechers Football Launches The New 'Electrum Pack'</p>
-              <button class="tag-btn">Football Boots</button>
-            </div>
-          </div>
-
-          <div class="brand-card">
-            <img src="../assets/sports/arda guler.jpg" alt="Item Image">
-            <div class="brand-content">
-              <p class="brand-title">PUMA Drop Third Chapter of 'Creativity' For The Future 8</p>
-              <button class="tag-btn">Football Boots</button>
-            </div>
-          </div>
-        </section>
+  </div>
 
 
 
-        <!-- <section class="feature">
+  <!-- <section class="feature">
           <h3>Feature 4</h3>
           <div>Moving pictures</div>
           <section class="feature-carousel">
@@ -247,24 +282,24 @@
             </div>
           </section>
         </section> -->
-      </main>
+  </main>
 
-      <footer class="footer">
-        <div class="footer-left">
-          <p>&copy; 2025 Sage News</p>
-        </div>
-        <div class="footer-right">
-          <p>Made with ❤️ in Edinburgh</p>
-        </div>
-      </footer>
+  <footer class="footer">
+    <div class="footer-left">
+      <p>&copy; 2025 Sage News</p>
     </div>
-
-    <script src="../JavaScript/article.js"></script>
-
-    <div class="gif-bottom-right">
-      <img src="your-gif.gif" alt="Fun gif">
+    <div class="footer-right">
+      <p>Made with ❤️ in Edinburgh</p>
     </div>
-    <script src="../html/tala.js"></script>
+  </footer>
+  </div>
+
+  <script src="../JavaScript/article.js"></script>
+
+  <div class="gif-bottom-right">
+    <img src="your-gif.gif" alt="Fun gif">
+  </div>
+  <script src="../html/tala.js"></script>
 
 </body>
 
