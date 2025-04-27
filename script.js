@@ -1,53 +1,78 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Display Current Date
-    function updateDate() {
-        const dateElement = document.getElementById("current-date");
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        dateElement.textContent = now.toLocaleDateString("en-US", options);
+// === Breaking news rotation ===
+const breakingNews = [
+    "BREAKING: Sage News launches its sleek new layout!",
+    "UPDATE: Major storm expected this weekend.",
+    "FLASH: Scientists unveil new AI model!"
+];
+let currentIndex = 0;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % breakingNews.length;
+    const breakingText = document.getElementById("breaking-text");
+    if (breakingText) breakingText.textContent = breakingNews[currentIndex];
+}, 5000);
+
+// === Estimated reading time ===
+document.querySelectorAll(".read-time").forEach(el => {
+    const article = el.closest('.article');
+    if (article) {
+        const words = article.textContent.trim().split(/\s+/).length;
+        const minutes = Math.ceil(words / 250);
+        const span = el.querySelector("span");
+        if (span) span.textContent = `${minutes} min`;
     }
-    updateDate();
+});
 
-    // Dark Mode Toggle
-    const darkModeButton = document.getElementById("dark-mode-toggle");
-    darkModeButton.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-    });
-
-    // Search Articles
-    document.getElementById("search-bar").addEventListener("keyup", function () {
-        let filter = this.value.toLowerCase();
-        let articles = document.querySelectorAll(".news-grid article");
-
-        articles.forEach(article => {
-            let title = article.querySelector("h2").textContent.toLowerCase();
-            if (title.includes(filter)) {
-                article.style.display = "block";
-            } else {
-                article.style.display = "none";
-            }
+// === Toggle sensitive content ===
+const toggleBtn = document.getElementById("toggleSensitive");
+if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+        document.querySelectorAll(".sensitive").forEach(article => {
+            article.style.display = (article.style.display === "none" ? "block" : "none");
         });
     });
+}
 
-    // Read Time Indicator
-    function calculateReadTime() {
-        let wordsPerMinute = 200;
-        let text = document.querySelector(".headline .subheadline").textContent;
-        let wordCount = text.split(" ").length;
-        let readTime = Math.ceil(wordCount / wordsPerMinute);
-        document.getElementById("read-time").textContent = `Estimated read time: ${readTime} min`;
+// === Modal popup ===
+function openSummary(title, content) {
+    const modal = document.getElementById("summaryModal");
+    if (modal) {
+        modal.querySelector("#modalTitle").textContent = title;
+        modal.querySelector("#modalContent").textContent = content;
+        modal.style.display = "block";
     }
-    calculateReadTime();
+}
 
-    // Load More Articles
-    const loadMoreButton = document.getElementById("load-more");
-    loadMoreButton.addEventListener("click", function () {
-        let newsGrid = document.getElementById("news-grid");
-        for (let i = 4; i <= 6; i++) {
-            let article = document.createElement("article");
-            article.innerHTML = `<h2>Article Title ${i}</h2><p>More news content...</p>`;
-            newsGrid.appendChild(article);
-        }
-        loadMoreButton.style.display = "none"; // Hide button after loading
+const closeBtn = document.querySelector(".close");
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        document.getElementById("summaryModal").style.display = "none";
     });
-});
+}
+
+// === Dark mode toggle ===
+const darkToggle = document.getElementById("darkModeToggle");
+if (darkToggle) {
+    darkToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+}
+
+// === Search feature ===
+const searchInput = document.getElementById("searchInput");
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+        const term = this.value.toLowerCase();
+        document.querySelectorAll(".center-col .article, .featured-article").forEach(article => {
+            const text = article.textContent.toLowerCase();
+            article.style.display = text.includes(term) ? "block" : "none";
+        });
+    });
+}
+
+// === Live clock ===
+setInterval(() => {
+    const now = new Date();
+    const clock = document.getElementById("clock");
+    if (clock) clock.textContent = now.toLocaleString();
+}, 1000);

@@ -1,67 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata and linking the external CSS file -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SageNews</title>
+    <title>SAGE NEWS</title>
     <link rel="stylesheet" href="style.css">
-</head>>
+</head>
 <body>
-<!-- Header section containing the logo, date, and navigation menu -->
 <header>
-    <div class = "logo">SageNews</div>
-    <div class="date" id="current-date"></div>
-    <button id="dark-mode-toggle">Dark Mode</button>
-    <input type="text" id="search-bar" placeholder="Search...">
-    <nav>
-        <ul>
-            <li><a href="#">Weather</a></li>
-            <li><a href="#">Tech</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Entertainment</a></li>
-        </ul>
+    <div class="top-bar">
+        <h1>SAGE NEWS</h1>
+        <button id="darkModeToggle">🌓</button>
+    </div>
+    <nav class="categories">
+        <a href="#">Entertainment</a>
+        <a href="#">Tech</a>
+        <a href="#">Sports</a>
+        <a href="#">World</a>
     </nav>
-</header>>
-<!--main content-->
-<main>
-    <section class="Headline">
-        <h1>Breaking News: Major Event Unfolds</h1>
-        <p class="Subheadline">A detailed report on breaking news...</p>
-        <img src="headline.jpg" alt="Headline Image">
-        <p class="read-time" id="read-time"></p> <!-- Read Time Indicator -->
-    </section>
-    <section class="news-grid">
-        <article>
-            <h2>Article Title 1</h2>
-            <p>Brief Summary of the news article...</p>
-            </article>
-        <article>
-            <h2>Article Title 2</h2>
-            <p>Another important story...</p>
-        </article>
-        <article>
-            <h2>Article Title 3</h2>
-            <p>Updates on recent events...</p>
-        </article>
+</header>
+
+<div id="clock" class="clock-display"></div>
+
+<nav class="quick-jump">
+    <a href="#featured">Featured</a>
+    <a href="#entertainment">Entertainment</a>
+    <a href="#sports">Sports</a>
+    <a href="#tech">Tech</a>
+</nav>
+
+<div class="breaking-news">
+    <p id="breaking-text">BREAKING: Sage News launches its sleek new layout!</p>
+</div>
+
+<main class="container">
+    <!-- Left Column -->
+    <aside class="left-col">
+        <div class="fact-box">
+            <h3>Did You Know?</h3>
+            <p id="fact-text">The average person reads at 250 words per minute.</p>
+        </div>
+    </aside>
+
+    <!-- Center Column -->
+    <section class="center-col">
+        <div id="featured" class="featured-article">
+            <img src="https://via.placeholder.com/800x300" alt="Top Story">
+            <h2>Top Story: The Future of News Begins Here</h2>
+            <p class="read-time">Reading time: <span>2</span> min</p>
+            <p class="content">A revolutionary take on digital journalism, SAGE NEWS leads with bold design and deep stories.</p>
+            <button onclick="openSummary('Top Story', 'Full content goes here...')">Read More</button>
+        </div>
+
+        <section id="editors-picks">
+            <h2>Editor's Picks</h2>
+            <div class="picks-grid">
+                <article>
+                    <h3>Inside the Crisis in Sudan</h3>
+                    <p class="content">A deep dive into the root causes of ongoing conflict...</p>
+                </article>
+                <article>
+                    <h3>AI in Everyday Life</h3>
+                    <p class="content">How AI is silently shaping your decisions...</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="article sensitive">
+            <h3>Sensitive: Warzone Updates</h3>
+            <p class="read-time">Reading time: <span>1</span> min</p>
+            <p class="content">This contains graphic descriptions of conflict zones. Viewer discretion advised.</p>
+        </div>
+
+        <button id="toggleSensitive">Toggle Sensitive Content</button>
     </section>
 
-    <!-- Load More Articles Button -->
-    <button id="load-more">Load More</button>
-    <aside class="Sidebar">
-        <h3>Trending Now</h3>
-        <ul>
-            <li><a href="#">Trending Story 1</a></li>
-            <li><a href="#">Trending Story 2</a></li>
-            <li><a href="#">Trending Story 3</a></li>
-        </ul>
-        </aside>
+    <section id="missed-it">
+        <h2>In Case You Missed It</h2>
+        <div class="scroll-box">
+            <div class="scroll-item">Climate Deal Falls Apart</div>
+            <div class="scroll-item">NASA Discovers Exoplanet</div>
+            <div class="scroll-item">New Voting Law Explained</div>
+        </div>
+    </section>
+
+    <!-- Right Column -->
+    <aside class="right-col">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+        </div>
+    </aside>
 </main>
 
-<!--footer -->
-<footer>
-    <p>&copy; 2025 SageNews. All rights reserved.</p>
-</footer>
+<div id="summaryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalContent"></p>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>

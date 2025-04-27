@@ -3,57 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Wireframe</title>
-    <link rel="stylesheet" href="wireframe.css">
+    <title>Sage News</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!-- Dark Mode Toggle Button -->
+<button id="darkModeToggle">Toggle Dark Mode</button>
 
-<!-- Breaking News Banner -->
-<div class="breaking-news">
-    <p>Breaking: Major event happening now...</p>
+<!-- Breaking News Section -->
+<div id="breaking-news">
+    <p id="breaking-text"></p>
 </div>
 
-<!-- Header Section -->
-<header>
-    <div class="logo">NEWS LOGO</div>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Weather</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Tech</a></li>
-            <li><a href="#">Entertainment</a></li>
+<!-- Search Section -->
+<input type="text" id="searchInput" placeholder="Search for articles...">
 
-        </ul>
-    </nav>
-</header>
+<!-- Article List -->
+<div class="article-list">
+    <article class="article">
+        <h2>Article Title</h2>
+        <p class="read-time">Estimated Reading Time: <span></span> min</p>
+        <p class="article-content">Lorem ipsum dolor sit amet...</p>
+    </article>
+    <!-- More articles can go here -->
+</div>
 
-<!-- Main Content -->
-<main>
-    <section class="headline">
-        <h1>Main Headline News</h1>
-        <p>Summary of the top story...</p>
-    </section>
+<!-- Sensitive Content Toggle -->
+<button id="toggleSensitive">Toggle Sensitive Content</button>
 
-    <section class="news-grid">
-        <article class="news-item">Story 1</article>
-        <article class="news-item">Story 2</article>
-        <article class="news-item">Story 3</article>
-        <article class="news-item">Story 4</article>
-    </section>
+<!-- Modal for Article Summary -->
+<div id="summaryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalContent"></p>
+    </div>
+</div>
 
-    <aside class="sidebar">
-        <h2>Trending</h2>
-        <p>Popular Story 1</p>
-        <p>Popular Story 2</p>
-        <p>Popular Story 3</p>
-    </aside>
-</main>
+<!-- Live Clock -->
+<div id="clock"></div>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 News Wireframe</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>

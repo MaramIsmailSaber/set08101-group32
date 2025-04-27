@@ -6,7 +6,7 @@
 - **Urgent news pop-up** for breaking news.
 - **Responsive design** – layout adapts for different devices.
 - **Hover effect for images** – images enlarge when hovered over.
-- **Auto-play for videos** – videos start playing after a minute of hovering.
+- **Autoplay for videos** – videos start playing after a minute of hovering.
 
 ## Implementation Plan
 ### **1. Structure (HTML)**
@@ -22,7 +22,7 @@
 ### **3. Interactivity (JavaScript)**
 - **Urgent news pop-up:** Display on page load & dismiss when closed.
 - **Image hover effect:** Increase size when hovered.
-- **Video auto-play:** Detect hover time and play video after 1 minute.
+- **Video autoplay:** Detect hover time and play video after 1 minute.
 
 ### **4. Responsive Approach**
 - **Mobile-first design**: Optimize for smaller screens first, then scale up.
