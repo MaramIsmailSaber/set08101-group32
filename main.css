@@ -1,0 +1,103 @@
+/* Author: Maram Ismail */
+/* CSS for the base of all the pages, will be overriden accordingly in each individual page */
+
+@font-face {
+    font-family: 'EngraversOldEnglish';
+    /*src: url('../resources/OPTIEngraversOldEnglish.otf');*/
+}
+
+body {
+    background-color: rgba(193, 186, 175, 0.83);
+    color: #20150f;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+
+.body-container {
+    max-width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    min-height: 100vh;
+
+}
+
+.top-bar {
+    background-color: #20150f;
+;
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(193, 186, 175, 0.83);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    z-index: 1000;
+    font-family: "EngraversOldEnglish";
+}
+
+.top-left h1 {
+    margin: 0;
+}
+
+.inverted-box {
+    background-color: rgba(193, 186, 175, 0.83);
+    color: #20150f;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(193, 186, 175, 0.83);
+}
+
+.top-right p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+nav {
+    background-color: rgba(193, 186, 175, 0.83);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #20150f;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #20150f;
+    color: rgba(193, 186, 175, 0.83);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'EngraversOldEnglish', 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}

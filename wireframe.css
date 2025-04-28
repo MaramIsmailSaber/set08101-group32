@@ -1,8 +1,52 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 body.dark-mode {
     background-color: #121212;
     color: white;
 }
 
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Breaking News */
 #breaking-news {
     background-color: #ff9800;
     padding: 10px;
@@ -10,16 +54,19 @@ body.dark-mode {
     text-align: center;
 }
 
+/* Search Input */
 #searchInput {
-    width: 100%;
-    padding: 8px;
-    margin-top: 20px;
+    width: 90%;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
 }
 
+/* Article List */
 .article-list .article {
     border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin: 20px;
+    padding-bottom: 20px;
 }
 
 .read-time {
@@ -27,13 +74,18 @@ body.dark-mode {
     color: #777;
 }
 
+/* Sensitive Content Button */
 #toggleSensitive {
-    margin-top: 20px;
+    margin: 20px auto;
+    display: block;
     padding: 10px;
     background-color: #f44336;
     color: white;
+    border: none;
+    cursor: pointer;
 }
 
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -52,6 +104,7 @@ body.dark-mode {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    position: relative;
 }
 
 .close {
@@ -70,6 +123,7 @@ body.dark-mode {
     cursor: pointer;
 }
 
+/* Live Clock */
 #clock {
     position: fixed;
     bottom: 10px;
@@ -78,4 +132,13 @@ body.dark-mode {
     background-color: #333;
     color: white;
     padding: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
 }

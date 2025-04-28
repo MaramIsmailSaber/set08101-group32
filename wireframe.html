@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sage News</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wireframe.css">
 </head>
 <body>
+
+<!-- Header -->
+<header>
+    <h1>SAGE NEWS</h1>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="tech.html">Tech</a></li>
+        <li><a href="weather.html">Weather</a></li>
+    </ul>
+</nav>
+
 <!-- Dark Mode Toggle Button -->
 <button id="darkModeToggle">Toggle Dark Mode</button>
 
 <!-- Breaking News Section -->
 <div id="breaking-news">
-    <p id="breaking-text"></p>
+    <p id="breaking-text">Breaking News will appear here...</p>
 </div>
 
 <!-- Search Section -->
@@ -22,8 +38,8 @@
 <div class="article-list">
     <article class="article">
         <h2>Article Title</h2>
-        <p class="read-time">Estimated Reading Time: <span></span> min</p>
-        <p class="article-content">Lorem ipsum dolor sit amet...</p>
+        <p class="read-time">Estimated Reading Time: <span>3</span> min</p>
+        <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
     </article>
     <!-- More articles can go here -->
 </div>
@@ -42,6 +58,11 @@
 
 <!-- Live Clock -->
 <div id="clock"></div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Sage News. All rights reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
