@@ -1,105 +1,146 @@
+<!-- Author: Akpan David -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAGE NEWS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sage News</title>
+    <link rel="stylesheet" href="../Style/main.css">
+    <link rel="stylesheet" href="../Style/index.css">
+
 </head>
+
 <body>
-<header>
-    <div class="top-bar">
-        <h1>SAGE NEWS</h1>
-        <button id="darkModeToggle">🌓</button>
-    </div>
-    <nav class="categories">
-        <a href="#">Entertainment</a>
-        <a href="#">Tech</a>
-        <a href="#">Sports</a>
-        <a href="#">World</a>
-    </nav>
-</header>
+<div class="page-wrapper">
+    <div class="body-container">
 
-<div id="clock" class="clock-display"></div>
-
-<nav class="quick-jump">
-    <a href="#featured">Featured</a>
-    <a href="#entertainment">Entertainment</a>
-    <a href="#sports">Sports</a>
-    <a href="#tech">Tech</a>
-</nav>
-
-<div class="breaking-news">
-    <p id="breaking-text">BREAKING: Sage News launches its sleek new layout!</p>
-</div>
-
-<main class="container">
-    <!-- Left Column -->
-    <aside class="left-col">
-        <div class="fact-box">
-            <h3>Did You Know?</h3>
-            <p id="fact-text">The average person reads at 250 words per minute.</p>
-        </div>
-    </aside>
-
-    <!-- Center Column -->
-    <section class="center-col">
-        <div id="featured" class="featured-article">
-            <img src="https://via.placeholder.com/800x300" alt="Top Story">
-            <h2>Top Story: The Future of News Begins Here</h2>
-            <p class="read-time">Reading time: <span>2</span> min</p>
-            <p class="content">A revolutionary take on digital journalism, SAGE NEWS leads with bold design and deep stories.</p>
-            <button onclick="openSummary('Top Story', 'Full content goes here...')">Read More</button>
-        </div>
-
-        <section id="editors-picks">
-            <h2>Editor's Picks</h2>
-            <div class="picks-grid">
-                <article>
-                    <h3>Inside the Crisis in Sudan</h3>
-                    <p class="content">A deep dive into the root causes of ongoing conflict...</p>
-                </article>
-                <article>
-                    <h3>AI in Everyday Life</h3>
-                    <p class="content">How AI is silently shaping your decisions...</p>
-                </article>
+        <header>
+            <div class="top-bar">
+                <div class="top-left">
+                    <h1>Sage<span class="inverted-box">News</span></h1>
+                </div>
+                <div class="top-right">
+                    <p id="time">Time: Loading</p>
+                    <p>Location: Edinburgh</p>
+                </div>
             </div>
-        </section>
+            <nav class="nav-bar">
+                <div class="nav-items">
+                    <div id="home"><a href="index.html">Home</a></div>
+                    <div id="weather"><a href="weather.html">Weather</a></div>
+                    <div id="tech"><a href="tech-page.html">Tech</a></div>
+                    <div id="sports"><a href="sports.html">Sports</a></div>
+                    <div id="entertainment"><a href="entertainment.html">Entertainment</a></div>
+                </div>
+            </nav>
 
-        <div class="article sensitive">
-            <h3>Sensitive: Warzone Updates</h3>
-            <p class="read-time">Reading time: <span>1</span> min</p>
-            <p class="content">This contains graphic descriptions of conflict zones. Viewer discretion advised.</p>
+        </header>
+
+        <div id="clock" class="clock-display"></div>
+
+
+        <div class="breaking-news">
+            <p id="breaking-text">BREAKING: Sage News launches its sleek new layout!</p>
         </div>
 
-        <button id="toggleSensitive">Toggle Sensitive Content</button>
-    </section>
+        <nav class="quick-jump">
+            <a href="#featured">Featured</a>
+            <a href="#entertainment">Entertainment</a>
+            <a href="#sports">Sports</a>
+            <a href="#tech">Tech</a>
+        </nav>
+        <main class="container">
+            <aside class="left-col">
+                <div class="fact-box">
+                    <h3>Did You Know?</h3>
+                    <p id="fact-text">The average person reads at 250 words per minute.</p>
+                </div>
+            </aside>
 
-    <section id="missed-it">
-        <h2>In Case You Missed It</h2>
-        <div class="scroll-box">
-            <div class="scroll-item">Climate Deal Falls Apart</div>
-            <div class="scroll-item">NASA Discovers Exoplanet</div>
-            <div class="scroll-item">New Voting Law Explained</div>
+            <section class="center-col">
+                <div id="featured" class="featured-article">
+                    <img src="../assets/sports/jude bellingham.jpg" alt="Item Image">
+                    <h2>Top Story: The Future of News Begins Here</h2>
+                    <p class="read-time">Reading time: <span>2</span> min</p>
+                    <p class="content">A revolutionary take on digital journalism, SAGE NEWS leads with bold design and deep stories.</p>
+                    <button onclick="openSummary('Top Story', 'Full content goes here...')">Read More</button>
+                </div>
+
+                <section id="editors-picks">
+                    <h2>Editor's Picks</h2>
+                    <div class="picks-grid">
+                        <article>
+                            <h3>Inside the Crisis in Sudan</h3>
+                            <p class="content">A deep dive into the root causes of ongoing conflict...</p>
+                        </article>
+                        <article>
+                            <h3>AI in Everyday Life</h3>
+                            <p class="content">How AI is silently shaping your decisions...</p>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="article sensitive">
+                    <h3>Sensitive: Warzone Updates</h3>
+                    <p class="read-time">Reading time: <span>1</span> min</p>
+                    <p class="content">This contains graphic descriptions of conflict zones. Viewer discretion advised.</p>
+                </div>
+
+                <button id="toggleSensitive">Toggle Sensitive Content</button>
+            </section>
+
+            <section id="missed-it">
+                <h2>In Case You Missed It</h2>
+                <div class="scroll-box">
+                    <div class="scroll-item">
+                        <h2>Elusive Sun Spotted in Scotland?</h2>
+                        <p>With meteorological spring starting just a few weeks before, and March just coming to a close, no one expected to see soaring temperatures as high as 18 degrees Celsius so early in the year. It was dry, still, and warm for nearly a whole week in the last few days of March, seeing people all across Scotland dusting off their summer clothes and lighter layers. Unfortunately, the mid-July feeling was short-lived as the following Monday greeted us with light rain and grey skies.</p>
+                        <p>Just a month on, as we approach the end of March, we are looking at another blissful glimpse of summer, with temperatures predicted to jump up to as high as 20 degrees. This weather is welcomed at a time when High School students are just finishing for study leave, hopefully, some sunshine can motivate them to get out and enjoy the warmth while they read up on important material.</p>
+                        <p>Heat map sourced from GBNews</p>
+                    </div>
+                    <div class="scroll-item">
+                        <h2>AI In Cybersecurity</h2>
+                        <p>With the increasing threat landscape, AI is becoming a cornerstone of cybersecurity. It can predict, detect, and respond to cyberattacks in real-time, offering faster, more efficient protection. By analyzing patterns in data, AI systems can recognize threats before they escalate and even automate defensive measures. As digital transformation grows, AI’s role in safeguarding our online environment is becoming more critical.</p>
+                    </div>
+                    <div class="scroll-item">
+                        <h2>Nike Dropped Limited</h2>
+                        <p>Nike’s latest limited-edition release has fans buzzing worldwide. With a fresh design and innovative materials, this new drop has already sold out in most regions. Sneakerheads are scrambling to grab a pair, while others eagerly await the next launch. Limited-edition releases continue to drive hype in the fashion industry, and Nike remains at the forefront of this trend, constantly pushing the boundaries of sneaker culture.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <aside class="right-col">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                </div>
+            </aside>
+        </main>
+
+        <div id="summaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalContent"></p>
+            </div>
         </div>
-    </section>
 
-    <!-- Right Column -->
-    <aside class="right-col">
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search articles...">
+    </div> <!-- CLOSE body-container properly here -->
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 Sage News</p>
         </div>
-    </aside>
-</main>
+        <div class="footer-right">
+            <p>Made with ❤️ in Edinburgh</p>
+        </div>
+    </footer>
 
-<div id="summaryModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="modalTitle"></h3>
-        <p id="modalContent"></p>
-    </div>
-</div>
+</div> <!-- CLOSE page-wrapper properly here -->
 
-<script src="script.js"></script>
+<script src="../JavaScript/article.js"></script>
+
 </body>
-</html>
+
+</html>this is my current html code. What else do you need?

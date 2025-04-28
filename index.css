@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/* Author: Akpan David*/
+/* custom-styles.css */
 
 /* ====== Base Styles ====== */
 * {
@@ -8,12 +9,13 @@
 }
 
 body {
-    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
-    background-color: #fff;
-    color: #111;
+    color: #111; /* Color customisation */
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
 /* ====== Header ====== */
@@ -46,14 +48,17 @@ header {
 
 /* ====== Breaking News ====== */
 .breaking-news {
-    background-color: red;
+    background-color: #20150f;
     color: white;
     text-align: center;
     padding: 10px;
-    animation: blink 1s step-start infinite;
+    animation: blink 3s step-start infinite;
 }
+ .quick-jump {
+     color: #20150f;
+ }
 
-@keyframes blink {
+ @keyframes blink {
     50% { opacity: 0; }
 }
 
@@ -115,22 +120,12 @@ header {
     margin-top: 40px;
 }
 
-.picks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.picks-grid article {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
 .scroll-box {
     display: flex;
     overflow-x: auto;
     gap: 15px;
     padding: 10px 0;
+    justify-content: flex-start;  /* Ensure left-alignment for items */
 }
 
 .scroll-item {
@@ -139,8 +134,21 @@ header {
     border: 1px solid #ddd;
     padding: 10px 15px;
     min-width: 250px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    max-width: 300px; /* Add max width to prevent overflow */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Prevent text from spilling outside */
+    word-wrap: break-word;  /* Ensure text wraps properly within the box */
 }
+
+.scroll-item p {
+    margin: 0; /* Remove margins to prevent overflow */
+}
+
+.scroll-item h2 {
+    margin-top: 10px;
+    font-size: 1.2em; /* Optional: adjust to your preferred size */
+}
+
 
 /* ====== Clock Display ====== */
 .clock-display {
